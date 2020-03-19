@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chambi-cuisine/static/css/main.34de6062.chunk.css",
+    "main.js": "/chambi-cuisine/static/js/main.c9ac9f20.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.c9ac9f20.chunk.js.map",
+    "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.5ec860f8.js",
+    "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.5ec860f8.js.map",
+    "static/js/2.c8176fec.chunk.js": "/chambi-cuisine/static/js/2.c8176fec.chunk.js",
+    "static/js/2.c8176fec.chunk.js.map": "/chambi-cuisine/static/js/2.c8176fec.chunk.js.map",
+    "index.html": "/chambi-cuisine/index.html",
+    "precache-manifest.b4bb693bfae514b675805ee7bb442339.js": "/chambi-cuisine/precache-manifest.b4bb693bfae514b675805ee7bb442339.js",
+    "service-worker.js": "/chambi-cuisine/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/chambi-cuisine/static/css/main.34de6062.chunk.css.map",
+    "static/js/2.c8176fec.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.c8176fec.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ec860f8.js",
+    "static/js/2.c8176fec.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.c9ac9f20.chunk.js"
+  ]
+}
