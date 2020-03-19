@@ -1,9 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import GlobalTheme from "theme/provider.jsx";
 
 import Recipe from "components/recipe.jsx";
+import Header from "components/header.jsx";
+import Footer from "components/footer.jsx";
+
+import Home from "components/home.jsx";
 
 const headerHeight = "80px";
 const footerHeight = "200px";
@@ -14,54 +19,33 @@ const GlobalWrapper = styled.div`
   width: 100vw;
   display: flex;
   flex-flow: column nowrap;
-`;
-
-const Header = styled.header`
-  position: sticky;
-  flex-shrink: 0;
-  top: 0;
-  width: 100vw;
-  height: ${headerHeight};
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: white;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  z-index: 1;
+  overflow: hidden;
 `;
 
 const Main = styled.main`
   flex-grow: 1;
-  height: c100%;
+  height: 100%;
   background-color: white;
   margin-bottom: ${footerHeight};
   z-index: 0;
 `;
 
-const Footer = styled.footer`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: ${footerHeight};
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  z-index: -1;
-`;
-
 const App = () => (
   <GlobalTheme>
-    <GlobalWrapper>
-      <Header>chambi cuisine</Header>
-      <Main>
-        <Recipe />
-      </Main>
-      <Footer>GROS FOOTER MAGGLE</Footer>
-    </GlobalWrapper>
+    <Router>
+      <GlobalWrapper>
+        <Header height={headerHeight} />
+        <Main>
+          <Switch>
+            <Route path="/recipes/:id" children={<Recipe />} />
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Main>
+        <Footer height={footerHeight} />
+      </GlobalWrapper>
+    </Router>
   </GlobalTheme>
 );
 
