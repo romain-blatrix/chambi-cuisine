@@ -9,12 +9,12 @@ const myRecipe = [
 
 const RecipeContainer = styled.div`
   scroll-snap-type: y mandatory;
-  max-height: ${({ theme }) => css`calc(100vh - ${theme.headerHeight})`};
+  height: 100%;
   overflow-y: scroll;
 `;
 
 const StepContainer = styled.div`
-  min-height: ${({ theme }) => css`calc(100vh - ${theme.headerHeight})`};
+  min-height: 100%;
   width: 100vw;
   scroll-snap-align: start;
   display: flex;
