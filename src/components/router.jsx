@@ -7,6 +7,7 @@ import Home from "components/home.jsx";
 
 const RegularContainer = styled.div`
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
+  height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
   background-color: white;
   margin-bottom: ${({ theme }) => theme.footerHeight};
 `;

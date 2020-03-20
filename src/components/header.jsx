@@ -16,7 +16,7 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const Title = styled(Link)`
@@ -46,6 +46,7 @@ const Drawer = styled.div`
   width: 300px;
   max-width: 90vw;
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
+  height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
   background-color: ${({ theme }) => theme.colors.secondary};
   position: absolute;
   top: ${({ theme }) => theme.headerHeight};
@@ -84,7 +85,7 @@ const Header = ({ className }) => {
 
   return (
     <HeaderWrapper className={className}>
-      <Title to="/">Chambi cuisine</Title>
+      <Title to="">Chambi cuisine</Title>
       <DrawerTrigger onClick={handleDrawerToggle}>Les recettes</DrawerTrigger>
       <Drawer visible={isDrawerVisible}>
         {recipes.map(({ id, title }) => (

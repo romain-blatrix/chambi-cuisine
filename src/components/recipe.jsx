@@ -7,7 +7,6 @@ import recipes from "recipes";
 const RecipeContainer = styled.div`
   scroll-snap-type: y mandatory;
   height: 100%;
-  overflow-y: scroll;
 `;
 
 const RecipeTitle = styled.div`

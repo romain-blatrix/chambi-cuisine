@@ -17,8 +17,8 @@ const GlobalWrapper = styled.div`
 
 const MainRouter = styled(AppRouter)`
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
+  height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
   z-index: 0;
-  overflow-y: scroll;
 `;
 
 const App = () => {
