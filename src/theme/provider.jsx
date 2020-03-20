@@ -11,7 +11,9 @@ type Props = {|
 
 const GlobalTheme = ({ children }) => {
   const theme = {
-    colors
+    colors,
+    headerHeight: "80px",
+    footerHeight: "200px"
   };
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

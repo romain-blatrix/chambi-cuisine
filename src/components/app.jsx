@@ -1,52 +1,38 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import styled from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import GlobalTheme from "theme/provider.jsx";
 
-import Recipe from "components/recipe.jsx";
 import Header from "components/header.jsx";
 import Footer from "components/footer.jsx";
 
-import Home from "components/home.jsx";
-
-const headerHeight = "80px";
-const footerHeight = "200px";
+import AppRouter from "components/router.jsx";
 
 const GlobalWrapper = styled.div`
   position: relative;
-  height: calc(100vh + ${footerHeight});
   width: 100vw;
-  display: flex;
-  flex-flow: column nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
 `;
 
-const Main = styled.main`
-  flex-grow: 1;
-  height: 100%;
-  background-color: white;
-  margin-bottom: ${footerHeight};
+const MainRouter = styled(AppRouter)`
+  height: calc(100vh - ${({ theme }) => theme.headerHeight});
   z-index: 0;
+  overflow-y: scroll;
 `;
 
-const App = () => (
-  <GlobalTheme>
-    <Router>
-      <GlobalWrapper>
-        <Header height={headerHeight} />
-        <Main>
-          <Switch>
-            <Route path="/recipes/:id" children={<Recipe />} />
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </Main>
-        <Footer height={footerHeight} />
-      </GlobalWrapper>
-    </Router>
-  </GlobalTheme>
-);
+const App = () => {
+  return (
+    <GlobalTheme>
+      <Router>
+        <GlobalWrapper>
+          <Header />
+          <MainRouter />
+          <Footer />
+        </GlobalWrapper>
+      </Router>
+    </GlobalTheme>
+  );
+};
 
 export default App;

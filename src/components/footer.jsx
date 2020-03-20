@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer`
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: ${({ height }) => height};
+  height: ${({ theme }) => theme.footerHeight};
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   display: flex;
@@ -16,10 +16,8 @@ const FooterWrapper = styled.footer`
   z-index: -1;
 `;
 
-const Footer = ({ className, height }) => (
-  <FooterWrapper className={className} height={height}>
-    gros footer maggle
-  </FooterWrapper>
+const Footer = ({ className }) => (
+  <FooterWrapper className={className}>gros footer maggle</FooterWrapper>
 );
 
 export default Footer;

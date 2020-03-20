@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from "react";
-import styled, { css } from "styled-components";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
+import React from "react";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
 
 import recipes from "recipes";
-
-const myRecipe = [
-  { title: "faire bouillir l'eau", description: "blablabla" },
-  { title: "couper les patates", description: "blablabla" },
-  { title: "couper les oignons", description: "et ouai maggle" }
-];
 
 const RecipeContainer = styled.div`
   scroll-snap-type: y mandatory;
@@ -28,6 +16,7 @@ const RecipeTitle = styled.div`
   justify-content: center;
   color: black;
   font-size: 26px;
+  z-index: 1;
 `;
 
 const StepContainer = styled.div`
@@ -39,6 +28,7 @@ const StepContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: white;
 `;
 
 const StepMark = styled.div`
@@ -47,21 +37,29 @@ const StepMark = styled.div`
   right: 10px;
 `;
 
-const Recipe = () => {
+const RevealFooter = styled.div`
+  height: ${({ theme }) => theme.footerHeight};
+  background-color: transparent;
+  scroll-snap-align: start;
+`;
+
+const Recipe = ({ className, footerHeight }) => {
   let { id } = useParams();
-  const nbOfSteps = myRecipe.length;
 
   const currentRecipe = recipes.find(recipe => recipe.id === id);
+  const nbOfSteps = currentRecipe.steps.length;
+
   return (
-    <RecipeContainer>
+    <RecipeContainer className={className}>
       <RecipeTitle>{currentRecipe.title}</RecipeTitle>
       {currentRecipe.steps.map(({ title, description }, index) => (
-        <StepContainer>
+        <StepContainer key={`currentRecipe.id_${index}`}>
           <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
           <div>{title}</div>
           <div>{description}</div>
         </StepContainer>
       ))}
+      <RevealFooter />
     </RecipeContainer>
   );
 };

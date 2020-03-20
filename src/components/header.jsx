@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import recipes from "recipes";
 
@@ -9,7 +9,7 @@ const HeaderWrapper = styled.header`
   flex-shrink: 0;
   top: 0;
   width: 100vw;
-  height: ${({ height }) => height};
+  height: ${({ theme }) => theme.headerHeight};
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   padding: 0 10px;
@@ -33,7 +33,7 @@ const DrawerTrigger = styled.button`
   background-color: transparent;
   cursor: pointer;
   &:focus {
-    outline: O;
+    outline: none;
   }
   &:hover {
     background-color: white;
@@ -44,20 +44,23 @@ const DrawerTrigger = styled.button`
 
 const Drawer = styled.div`
   width: 300px;
-  height: calc(100vh - ${({ height }) => height});
+  max-width: 90vw;
+  height: calc(100vh - ${({ theme }) => theme.headerHeight});
   background-color: ${({ theme }) => theme.colors.secondary};
   position: absolute;
-  top: ${({ height }) => height};
+  top: ${({ theme }) => theme.headerHeight};
   right: 0;
   transform: translateX(300px);
   transition: transform 300ms ease;
   display: flex;
   flex-flow: column nowrap;
   padding: 20px 0;
+
   ${({ visible }) =>
     visible &&
     css`
       transform: translateX(0);
+      box-shadow: -1px 10px 13px 4px #0000006b;
     `}
 `;
 
@@ -74,16 +77,16 @@ const RecipeLink = styled(Link)`
   }
 `;
 
-const Header = ({ className, height }) => {
+const Header = ({ className }) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
   const handleDrawerToggle = () => setIsDrawerVisible(!isDrawerVisible);
 
   return (
-    <HeaderWrapper className={className} height={height}>
+    <HeaderWrapper className={className}>
       <Title to="/">Chambi cuisine</Title>
       <DrawerTrigger onClick={handleDrawerToggle}>Les recettes</DrawerTrigger>
-      <Drawer height={height} visible={isDrawerVisible}>
+      <Drawer visible={isDrawerVisible}>
         {recipes.map(({ id, title }) => (
           <RecipeLink
             key={id}
