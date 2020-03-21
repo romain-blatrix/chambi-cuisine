@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 
 import recipes from "recipes";
 
@@ -26,6 +26,11 @@ const Title = styled(Link)`
   font-size: 24px;
   color: white;
   text-decoration: none;
+`;
+
+const SubTitle = styled.div`
+  font-size: 18px;
+  color: white;
 `;
 
 const DrawerTrigger = styled.button`
@@ -71,6 +76,19 @@ const DrawerTrigger = styled.button`
 
 const Header = ({ className }) => {
   const ref = useRef(null);
+  const match = useRouteMatch("/recipes/:id");
+
+  const [subTitle, setSubTitle] = useState(null);
+
+  useEffect(() => {
+    if (match && match.params && match.params.id) {
+      const currentRecipe = recipes.find(
+        recipe => recipe.id === match.params.id
+      );
+      return setSubTitle(currentRecipe.headerTitle);
+    }
+    return setSubTitle(null);
+  }, [match]);
 
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
@@ -79,7 +97,12 @@ const Header = ({ className }) => {
 
   return (
     <HeaderWrapper className={className}>
-      <Title to="">Chambi cuisine</Title>
+      <div>
+        <Title to="">
+          Chambi cuisine{subTitle && <SubTitle>{subTitle}</SubTitle>}
+        </Title>
+      </div>
+
       <div ref={ref}>
         <DrawerTrigger onClick={handleDrawerToggle}>Les recettes</DrawerTrigger>
         <Drawer

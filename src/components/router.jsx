@@ -31,6 +31,7 @@ const SnapContent = styled.div`
 const AppRouter = ({ className }) => {
   const location = useLocation();
   const ref = useRef(null);
+
   useEffect(() => {
     const router = document.getElementById("router");
     router && router.scrollTo(0, 0);

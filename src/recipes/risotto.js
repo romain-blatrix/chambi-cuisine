@@ -3,6 +3,7 @@ const id = "risotto";
 const risotto = {
   id,
   title: "Risotto bourguignon",
+  headerTitle: "un risotto bourguignon",
   steps: [
     { title: "faire une petite pétanque", description: "blablabla" },
     { title: "boire un ricard", description: "blablabla" },

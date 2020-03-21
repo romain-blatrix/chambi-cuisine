@@ -29,31 +29,35 @@ const StepContainer = styled.div`
   align-items: center;
   position: relative;
   background-color: white;
+  overflow: hidden;
 `;
 
 const StepMark = styled.div`
+  font-size: 14px;
+  width: 100px;
+  background: #e45b4e9e;
   position: absolute;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
   top: 10px;
-  right: 10px;
+  right: -30px;
+  transform: rotate(45deg);
 `;
 
-const Recipe = ({ className, footerHeight }) => {
-  let { id } = useParams();
+const Recipe = ({ className }) => {
+  const { id } = useParams();
   const currentRecipe = recipes.find(recipe => recipe.id === id);
   const nbOfSteps = currentRecipe.steps.length;
 
-  return (
-    <>
-      <RecipeTitle>{currentRecipe.title}</RecipeTitle>
-      {currentRecipe.steps.map(({ title, description }, index) => (
-        <StepContainer key={`currentRecipe.id_${index}`}>
-          <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
-          <div>{title}</div>
-          <div>{description}</div>
-        </StepContainer>
-      ))}
-    </>
-  );
+  return currentRecipe.steps.map(({ title, description }, index) => (
+    <StepContainer key={`currentRecipe.id_${index}`}>
+      <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
+      <div>{title}</div>
+      <div>{description}</div>
+    </StepContainer>
+  ));
 };
 
 export default Recipe;
