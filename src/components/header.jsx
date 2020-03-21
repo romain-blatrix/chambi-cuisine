@@ -37,11 +37,8 @@ const DrawerTrigger = styled.button`
   background-color: transparent;
   cursor: pointer;
 
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  transition-property: color;
-  transition-duration: 0.3s;
+  transition: color 300ms ease;
 
   &::before {
     content: "";
@@ -55,7 +52,7 @@ const DrawerTrigger = styled.button`
     transform: scaleX(0);
     transform-origin: 100% 50%;
     transition-property: transform;
-    transition-duration: 150ms;
+    transition-duration: 300ms;
     transition-timing-function: ease-out;
   }
 
@@ -77,13 +74,7 @@ const Header = ({ className }) => {
 
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
-  const handleDrawerToggle = () => {
-    // document.getElementById("router") &&
-    //   document.getElementById("router").firstChild.scrollIntoView();
-    // console.log(document.getElementById("router").firstChild);
-
-    setIsDrawerVisible(!isDrawerVisible);
-  };
+  const handleDrawerToggle = () => setIsDrawerVisible(!isDrawerVisible);
   const closeDrawer = () => setIsDrawerVisible(false);
 
   return (
