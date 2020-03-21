@@ -59,7 +59,12 @@ const Drawer = ({ className, closeDrawer, isVisible, recipes }, ref) => {
   return (
     <StyledDrawer isVisible={isVisible}>
       {recipes.map(({ id, title }) => (
-        <RecipeLink activeClassName="active" key={id} to={`/recipes/${id}`}>
+        <RecipeLink
+          activeClassName="active"
+          key={id}
+          to={`/recipes/${id}`}
+          onClick={closeDrawer}
+        >
           {title}
         </RecipeLink>
       ))}

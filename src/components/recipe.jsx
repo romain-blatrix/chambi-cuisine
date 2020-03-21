@@ -19,16 +19,10 @@ const RecipeTitle = styled.div`
   z-index: 1;
 `;
 
-const RecipeContainer = styled.div`
-  scroll-snap-type: y mandatory;
-  overflow: auto;
-  height: 100%;
-`;
-
 const StepContainer = styled.div`
+  scroll-snap-align: start;
   min-height: 100%;
   width: 100vw;
-  scroll-snap-align: start;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -43,12 +37,6 @@ const StepMark = styled.div`
   right: 10px;
 `;
 
-const RevealFooter = styled.div`
-  height: ${({ theme }) => theme.footerHeight};
-  background-color: transparent;
-  scroll-snap-align: start;
-`;
-
 const Recipe = ({ className, footerHeight }) => {
   let { id } = useParams();
 
@@ -58,16 +46,13 @@ const Recipe = ({ className, footerHeight }) => {
   return (
     <>
       <RecipeTitle>{currentRecipe.title}</RecipeTitle>
-      <RecipeContainer className={className}>
-        {currentRecipe.steps.map(({ title, description }, index) => (
-          <StepContainer key={`currentRecipe.id_${index}`}>
-            <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
-            <div>{title}</div>
-            <div>{description}</div>
-          </StepContainer>
-        ))}
-        <RevealFooter />
-      </RecipeContainer>
+      {currentRecipe.steps.map(({ title, description }, index) => (
+        <StepContainer key={`currentRecipe.id_${index}`}>
+          <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
+          <div>{title}</div>
+          <div>{description}</div>
+        </StepContainer>
+      ))}
     </>
   );
 };

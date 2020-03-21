@@ -77,7 +77,10 @@ const Header = ({ className }) => {
 
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
-  const handleDrawerToggle = () => setIsDrawerVisible(!isDrawerVisible);
+  const handleDrawerToggle = () => {
+    window.scrollTo(0, 0);
+    setIsDrawerVisible(!isDrawerVisible);
+  };
 
   const closeDrawer = () => setIsDrawerVisible(false);
 
