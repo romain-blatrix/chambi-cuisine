@@ -9,6 +9,7 @@ const RevealFooter = styled.div`
   height: ${({ theme }) => theme.footerHeight};
   background-color: transparent;
   scroll-snap-align: start;
+  box-shadow: inset 0px 6px 9px 1px #00000059;
 `;
 
 const Container = styled.div`
@@ -18,6 +19,7 @@ const Container = styled.div`
   height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
   z-index: 0;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
 `;
 
 const SnapContent = styled.div`

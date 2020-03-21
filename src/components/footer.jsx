@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Particles from "react-particles-js";
 
 const FooterWrapper = styled.footer`
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -13,17 +13,29 @@ const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
   z-index: -1;
 `;
 
 const StyledParticles = styled(Particles)`
   width: 100%;
   height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+`;
+
+const FooterContent = styled.div`
+  width: 80%;
+  max-width: 500px;
+  height: 80%;
+  border-radius: 10px;
+  background-color: #00000066;
+  padding: 10px;
 `;
 
 const Footer = ({ className }) => (
   <FooterWrapper className={className}>
+    <FooterContent>footer content</FooterContent>
     <StyledParticles
       params={{
         particles: {

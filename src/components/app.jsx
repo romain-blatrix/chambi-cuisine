@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import GlobalTheme from "theme/provider.jsx";
 
@@ -18,13 +18,13 @@ const GlobalWrapper = styled.div`
 const App = () => {
   return (
     <GlobalTheme>
-      <Router>
+      <HashRouter>
         <GlobalWrapper>
           <Header />
           <AppRouter />
           <Footer />
         </GlobalWrapper>
-      </Router>
+      </HashRouter>
     </GlobalTheme>
   );
 };
