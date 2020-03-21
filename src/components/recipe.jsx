@@ -39,7 +39,6 @@ const StepMark = styled.div`
 
 const Recipe = ({ className, footerHeight }) => {
   let { id } = useParams();
-
   const currentRecipe = recipes.find(recipe => recipe.id === id);
   const nbOfSteps = currentRecipe.steps.length;
 

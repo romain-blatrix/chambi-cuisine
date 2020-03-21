@@ -78,10 +78,12 @@ const Header = ({ className }) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
   const handleDrawerToggle = () => {
-    window.scrollTo(0, 0);
+    // document.getElementById("router") &&
+    //   document.getElementById("router").firstChild.scrollIntoView();
+    // console.log(document.getElementById("router").firstChild);
+
     setIsDrawerVisible(!isDrawerVisible);
   };
-
   const closeDrawer = () => setIsDrawerVisible(false);
 
   return (

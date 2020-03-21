@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 
 import Recipe from "components/recipe.jsx";
 import Home from "components/home.jsx";
@@ -26,20 +26,29 @@ const SnapContent = styled.div`
   background-color: white;
 `;
 
-const AppRouter = ({ className }) => (
-  <Container className={className}>
-    <Switch>
-      <Route path="/recipes/:id" exact>
-        <Recipe />
-      </Route>
-      <Route path="/">
-        <SnapContent>
-          <Home />
-        </SnapContent>
-      </Route>
-    </Switch>
-    <RevealFooter />
-  </Container>
-);
+const AppRouter = ({ className }) => {
+  const location = useLocation();
+  const ref = useRef(null);
+  useEffect(() => {
+    const router = document.getElementById("router");
+    router && router.scrollTo(0, 0);
+  }, [location]);
+
+  return (
+    <Container className={className} ref={ref} id="router">
+      <Switch>
+        <Route path="/recipes/:id" exact>
+          <Recipe />
+        </Route>
+        <Route path="/">
+          <SnapContent>
+            <Home />
+          </SnapContent>
+        </Route>
+      </Switch>
+      <RevealFooter />
+    </Container>
+  );
+};
 
 export default AppRouter;
