@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/chambi-cuisine/static/css/main.904c5aef.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.45d2ec2a.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.45d2ec2a.chunk.js.map",
+    "main.js": "/chambi-cuisine/static/js/main.db40b9bd.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.db40b9bd.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.5ec860f8.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.5ec860f8.js.map",
-    "static/js/2.65de5740.chunk.js": "/chambi-cuisine/static/js/2.65de5740.chunk.js",
-    "static/js/2.65de5740.chunk.js.map": "/chambi-cuisine/static/js/2.65de5740.chunk.js.map",
+    "static/js/2.ba282bc6.chunk.js": "/chambi-cuisine/static/js/2.ba282bc6.chunk.js",
+    "static/js/2.ba282bc6.chunk.js.map": "/chambi-cuisine/static/js/2.ba282bc6.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.ad77f995a5cdac5d5a127cb3f1a7bd78.js": "/chambi-cuisine/precache-manifest.ad77f995a5cdac5d5a127cb3f1a7bd78.js",
+    "precache-manifest.96e25328097aca7fadb923370bc15441.js": "/chambi-cuisine/precache-manifest.96e25328097aca7fadb923370bc15441.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
     "static/css/main.904c5aef.chunk.css.map": "/chambi-cuisine/static/css/main.904c5aef.chunk.css.map",
-    "static/js/2.65de5740.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.65de5740.chunk.js.LICENSE.txt"
+    "static/js/2.ba282bc6.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.ba282bc6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5ec860f8.js",
-    "static/js/2.65de5740.chunk.js",
+    "static/js/2.ba282bc6.chunk.js",
     "static/css/main.904c5aef.chunk.css",
-    "static/js/main.45d2ec2a.chunk.js"
+    "static/js/main.db40b9bd.chunk.js"
   ]
 }
