@@ -4,21 +4,6 @@ import { useParams } from "react-router-dom";
 
 import recipes from "recipes";
 
-const RecipeTitle = styled.div`
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  color: black;
-  font-size: 26px;
-  padding: 15px;
-  margin-left: 10px;
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: lightgrey;
-  background-color: lightgrey;
-  z-index: 1;
-`;
-
 const StepContainer = styled.div`
   scroll-snap-align: start;
   min-height: 100%;

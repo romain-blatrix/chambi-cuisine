@@ -3,17 +3,12 @@ import styled from "styled-components";
 import Particles from "react-particles-js";
 
 const FooterWrapper = styled.footer`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;
   height: ${({ theme }) => theme.footerHeight};
   background-color: ${({ theme }) => theme.colors.primary};
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: -1;
 `;
 
 const StyledParticles = styled(Particles)`
@@ -24,18 +19,8 @@ const StyledParticles = styled(Particles)`
   z-index: -1;
 `;
 
-const FooterContent = styled.div`
-  width: 80%;
-  max-width: 500px;
-  height: 80%;
-  border-radius: 10px;
-  background-color: #00000066;
-  padding: 10px;
-`;
-
 const Footer = ({ className }) => (
   <FooterWrapper className={className}>
-    <FooterContent>footer content</FooterContent>
     <StyledParticles
       params={{
         particles: {
@@ -103,45 +88,6 @@ const Footer = ({ className }) => (
               enable: false,
               rotateX: 881.8766334760375,
               rotateY: 801.7060304327614
-            }
-          }
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "repulse"
-            },
-            onclick: {
-              enable: false,
-              mode: "push"
-            },
-            resize: true
-          },
-          modes: {
-            grab: {
-              distance: 400,
-              line_linked: {
-                opacity: 1
-              }
-            },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4
-            },
-            push: {
-              particles_nb: 4
-            },
-            remove: {
-              particles_nb: 2
             }
           }
         },
