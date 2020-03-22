@@ -28,6 +28,7 @@ const StyledDrawer = styled.div`
 `;
 
 const RecipeLink = styled(NavLink)`
+  position: relative;
   text-decoration: none;
   color: white;
   height: 50px;
@@ -36,14 +37,28 @@ const RecipeLink = styled(NavLink)`
   align-items: center;
   border-bottom: 1px solid lightgrey;
 
-  &:hover,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background-color: white;
+    transition: height 100ms ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+    height: 2px;
+    transition: width 100ms ease-out;
+  }
+
   &.active {
     transition: color 300ms ease, background-color 300ms ease;
     background-color: white;
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  &:hover,
   &:active {
     color: ${({ theme }) => theme.colors.secondary};
   }
