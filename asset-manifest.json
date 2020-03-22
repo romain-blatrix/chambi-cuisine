@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/chambi-cuisine/static/css/main.07b0391b.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.87615b8a.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.87615b8a.chunk.js.map",
+    "main.js": "/chambi-cuisine/static/js/main.fe04da48.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.fe04da48.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.5ec860f8.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.5ec860f8.js.map",
-    "static/js/2.c1dc3299.chunk.js": "/chambi-cuisine/static/js/2.c1dc3299.chunk.js",
-    "static/js/2.c1dc3299.chunk.js.map": "/chambi-cuisine/static/js/2.c1dc3299.chunk.js.map",
+    "static/js/2.945bafa4.chunk.js": "/chambi-cuisine/static/js/2.945bafa4.chunk.js",
+    "static/js/2.945bafa4.chunk.js.map": "/chambi-cuisine/static/js/2.945bafa4.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.231f00fe55a0b1efcafe86b63861146f.js": "/chambi-cuisine/precache-manifest.231f00fe55a0b1efcafe86b63861146f.js",
+    "precache-manifest.afc67c0652107de6392653579a989a9c.js": "/chambi-cuisine/precache-manifest.afc67c0652107de6392653579a989a9c.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
     "static/css/main.07b0391b.chunk.css.map": "/chambi-cuisine/static/css/main.07b0391b.chunk.css.map",
-    "static/js/2.c1dc3299.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.c1dc3299.chunk.js.LICENSE.txt"
+    "static/js/2.945bafa4.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.945bafa4.chunk.js.LICENSE.txt",
+    "static/media/heart.9c4cfd2f.svg": "/chambi-cuisine/static/media/heart.9c4cfd2f.svg",
+    "static/media/instagram.92c8f04a.svg": "/chambi-cuisine/static/media/instagram.92c8f04a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5ec860f8.js",
-    "static/js/2.c1dc3299.chunk.js",
+    "static/js/2.945bafa4.chunk.js",
     "static/css/main.07b0391b.chunk.css",
-    "static/js/main.87615b8a.chunk.js"
+    "static/js/main.fe04da48.chunk.js"
   ]
 }
