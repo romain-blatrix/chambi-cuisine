@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64a6aca1f8a3d2715ba180f807523f00",
+    "revision": "c2cc7f3d69369f403587dcddb40a59ea",
     "url": "/chambi-cuisine/index.html"
   },
   {
