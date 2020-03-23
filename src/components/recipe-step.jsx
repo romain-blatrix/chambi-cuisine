@@ -44,7 +44,7 @@ const RecipeStep = ({
   index,
   nbOfSteps
 }) => {
-  const [image, status] = useImage(`recipe/${imageUrl}`);
+  const [image] = useImage(`recipe/${imageUrl}`);
 
   return (
     <StepContainer>
