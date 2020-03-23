@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import useImage from "hooks/image-loader.jsx";
 
+import defaultImage from "assets/image/recipe/default.jpg";
+
 const StepContainer = styled.div`
   scroll-snap-align: start;
   min-height: 100%;
@@ -46,14 +48,14 @@ const RecipeStep = ({
   index,
   nbOfSteps
 }) => {
-  const [image] = useImage(`recipe/${imageUrl}`);
+  const [image, status] = useImage(`recipe/${imageUrl}`);
 
   return (
     <StepContainer>
       <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
       <h3>{title}</h3>
       <div>{description}</div>
-      {image && <Image src={image} />}
+      <Image src={status === "loaded" ? image : defaultImage} />
     </StepContainer>
   );
 };
