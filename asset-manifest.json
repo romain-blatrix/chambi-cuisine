@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/chambi-cuisine/static/css/main.07b0391b.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.1fd659e5.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.1fd659e5.chunk.js.map",
+    "main.css": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css",
+    "main.js": "/chambi-cuisine/static/js/main.06cb697d.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.06cb697d.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.a06a990b.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.a06a990b.js.map",
     "static/js/2.7df4182e.chunk.js": "/chambi-cuisine/static/js/2.7df4182e.chunk.js",
@@ -20,9 +20,9 @@
     "static/js/8.35ae44d5.chunk.js": "/chambi-cuisine/static/js/8.35ae44d5.chunk.js",
     "static/js/8.35ae44d5.chunk.js.map": "/chambi-cuisine/static/js/8.35ae44d5.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.f7d9ecd66282be397755362e02b9e94c.js": "/chambi-cuisine/precache-manifest.f7d9ecd66282be397755362e02b9e94c.js",
+    "precache-manifest.a57b66b4f47825783d93cbca01b317d5.js": "/chambi-cuisine/precache-manifest.a57b66b4f47825783d93cbca01b317d5.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
-    "static/css/main.07b0391b.chunk.css.map": "/chambi-cuisine/static/css/main.07b0391b.chunk.css.map",
+    "static/css/main.cbd4699f.chunk.css.map": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css.map",
     "static/js/2.7df4182e.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.7df4182e.chunk.js.LICENSE.txt",
     "static/media/default.jpg": "/chambi-cuisine/static/media/default.fc773319.jpg",
     "static/media/heart.9c4cfd2f.svg": "/chambi-cuisine/static/media/heart.9c4cfd2f.svg",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.a06a990b.js",
     "static/js/2.7df4182e.chunk.js",
-    "static/css/main.07b0391b.chunk.css",
-    "static/js/main.1fd659e5.chunk.js"
+    "static/css/main.cbd4699f.chunk.css",
+    "static/js/main.06cb697d.chunk.js"
   ]
 }
