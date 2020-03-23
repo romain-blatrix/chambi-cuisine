@@ -14,6 +14,8 @@ const StepContainer = styled.div`
   position: relative;
   background-color: white;
   overflow: hidden;
+  padding: 15px;
+  text-align: center;
 `;
 
 const StepMark = styled.div`
