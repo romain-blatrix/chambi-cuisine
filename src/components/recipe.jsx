@@ -36,11 +36,12 @@ const Recipe = ({ className }) => {
   const currentRecipe = recipes.find(recipe => recipe.id === id);
   const nbOfSteps = currentRecipe.steps.length;
 
-  return currentRecipe.steps.map(({ title, description }, index) => (
+  return currentRecipe.steps.map(({ description, image, title }, index) => (
     <StepContainer key={`currentRecipe.id_${index}`}>
       <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
       <div>{title}</div>
       <div>{description}</div>
+      <div>{image}</div>
     </StepContainer>
   ));
 };

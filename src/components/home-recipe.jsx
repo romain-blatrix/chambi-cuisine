@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import defaultImage from "assets/image/recipe/default.jpeg";
+import defaultImage from "assets/image/recipe/default.jpg";
+
+import useImage from "hooks/image-loader.jsx";
 
 const StyledHomeRecipe = styled(Link)`
   position: relative;
@@ -15,7 +17,7 @@ const StyledHomeRecipe = styled(Link)`
   align-items: center;
   text-align: center;
   background: url(${({ image }) => image}) no-repeat;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 `;
 
@@ -31,26 +33,15 @@ const Title = styled.h2`
 `;
 
 const HomeRecipe = ({ className, id, title }) => {
-  const [image, setImage] = useState(defaultImage);
-
-  const loadImage = async id => {
-    try {
-      const image = await import(
-        /* webpackMode: "eager" */
-        `assets/image/recipe/${id}/main.jpeg`
-      );
-      setImage(image.default);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  useEffect(() => {
-    loadImage(id);
-  }, [id]);
+  const [image, status] = useImage(
+    import(`assets/image/recipe/${id}/main.jpg`)
+  );
 
   return (
-    <StyledHomeRecipe to={`/recipes/${id}`} image={image}>
+    <StyledHomeRecipe
+      to={`/recipes/${id}`}
+      image={status === "loaded" ? image : defaultImage}
+    >
       <Title>{title}</Title>
     </StyledHomeRecipe>
   );
