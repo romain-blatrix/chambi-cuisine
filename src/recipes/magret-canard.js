@@ -13,12 +13,12 @@ const magretCanard = {
     {
       title: "Préparation du bouillon 2/3",
       description:
-        "Quand 2/3 du liquide s’est évaporé ajouter 25cl de fond de veau délayé et laissez réduire encore de moitié l’ensemble de la préparation",
+        "Quand 2/3 du liquide s’est évaporé, ajouter 25cl de fond de veau délayé et laisser réduire encore de moitié l’ensemble de la préparation",
       imageUrl: `${id}/step1_2.jpg`
     },
     {
       title: "Préparation du bouillon 3/3",
-      description: "Garder à température (autour de 50 degré)",
+      description: "Garder à température (autour de 50 degrés)",
       imageUrl: `${id}/step1_3.jpg`
     },
     { title: "couper les patates", description: "blablabla" },

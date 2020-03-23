@@ -43,7 +43,7 @@ const DrawerTrigger = styled.button`
   cursor: pointer;
 
   position: relative;
-  transition: color 300ms ease;
+  transition: color 100ms ease-out;
 
   &::before {
     content: "";
@@ -56,17 +56,15 @@ const DrawerTrigger = styled.button`
     background: white;
     transform: scaleX(0);
     transform-origin: 100% 50%;
-    transition-property: transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-out;
+    transition: transform 100ms ease-out;
   }
 
   &:hover,
   &:active {
     color: ${({ theme }) => theme.colors.primary};
-
     &::before {
       transform: scaleX(1);
+      transition: transform 300ms ease;
     }
   }
   &:focus {

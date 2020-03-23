@@ -28,8 +28,8 @@ const StepMark = styled.div`
   letter-spacing: 1px;
   color: #f0f0f0;
   top: 10px;
-  right: -30px;
-  transform: rotate(45deg);
+  left: -30px;
+  transform: rotate(-45deg);
 `;
 
 const Image = styled.img`

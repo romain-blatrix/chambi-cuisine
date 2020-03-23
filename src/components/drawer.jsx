@@ -15,13 +15,14 @@ const StyledDrawer = styled.div`
   top: ${({ theme }) => theme.headerHeight};
   right: 0;
   transform: translateX(300px);
-  transition: transform 300ms ease;
+  transition: transform 100ms ease-out;
   display: flex;
   flex-flow: column nowrap;
 
   ${({ isVisible }) =>
     isVisible &&
     css`
+      transition: transform 300ms ease;
       transform: translateX(0);
       box-shadow: -1px 10px 13px 4px #0000006b;
     `}
@@ -55,12 +56,7 @@ const RecipeLink = styled(NavLink)`
 
   &.active {
     transition: color 300ms ease, background-color 300ms ease;
-    background-color: white;
-    color: ${({ theme }) => theme.colors.secondary};
-  }
-
-  &:active {
-    color: ${({ theme }) => theme.colors.secondary};
+    background-color: #377086;
   }
 
   &:focus {
