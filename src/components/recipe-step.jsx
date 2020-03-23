@@ -9,7 +9,7 @@ const StepContainer = styled.div`
   width: 100vw;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   background-color: white;
@@ -32,6 +32,7 @@ const StepMark = styled.div`
 
 const Image = styled.img`
   max-width: 500px;
+  width: 100%;
 `;
 
 const RecipeStep = ({
@@ -48,7 +49,7 @@ const RecipeStep = ({
   return (
     <StepContainer>
       <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
-      <div>{title}</div>
+      <h3>{title}</h3>
       <div>{description}</div>
       {image && <Image src={image} />}
     </StepContainer>
