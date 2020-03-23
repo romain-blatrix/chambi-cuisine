@@ -33,9 +33,7 @@ const Title = styled.h2`
 `;
 
 const HomeRecipe = ({ className, id, title }) => {
-  const [image, status] = useImage(
-    import(`assets/image/recipe/${id}/main.jpg`)
-  );
+  const [image, status] = useImage(`recipe/${id}/main.jpg`);
 
   return (
     <StyledHomeRecipe

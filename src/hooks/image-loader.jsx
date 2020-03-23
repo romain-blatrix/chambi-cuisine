@@ -8,18 +8,18 @@ const useImage = src => {
     if (!src) {
       return;
     }
-    (async src => {
-      try {
-        const image = await src;
-        setStatus("loaded");
-        setImage(image.default);
-      } catch (e) {
-        console.error(e);
-        setStatus("error");
-        setImage(null);
-      }
+    (src => {
+      import(`assets/image/${src}`)
+        .then(image => {
+          setStatus("loaded");
+          setImage(image.default);
+        })
+        .catch(err => {
+          setStatus("error");
+          setImage(null);
+        });
     })(src);
-  }, [src]);
+  }, [image, src]);
 
   return [image, status];
 };
