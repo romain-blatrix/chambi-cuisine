@@ -6,6 +6,8 @@ import recipes from "recipes";
 
 import Drawer from "components/drawer.jsx";
 
+import logoChambi from "assets/image/logo/chambi.jpg";
+
 const HeaderWrapper = styled.header`
   position: sticky;
   flex-shrink: 0;
@@ -22,15 +24,37 @@ const HeaderWrapper = styled.header`
   z-index: 2;
 `;
 
+const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Logo = styled.img`
+  display: none;
+  @media screen and (min-width: 400px) {
+    display: block;
+    width: 50px;
+    margin-right: 15px;
+  }
+`;
+
 const Title = styled(Link)`
   font-size: 24px;
   color: white;
   text-decoration: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
 `;
 
 const SubTitle = styled.div`
   font-size: 18px;
   color: white;
+`;
+
+const DrawerContainer = styled.div`
+  flex-shrink: 0;
+  margin-left: 15px;
 `;
 
 const DrawerTrigger = styled.button`
@@ -95,13 +119,15 @@ const Header = ({ className }) => {
 
   return (
     <HeaderWrapper className={className}>
-      <div>
+      <TitleContainer>
+        <Logo src={logoChambi} alt="logo chambi cuisine" />
         <Title to="">
-          Chambi cuisine{subTitle && <SubTitle>{subTitle}</SubTitle>}
+          <span>Chambi cuisine&nbsp;</span>
+          {subTitle && <SubTitle>{subTitle}</SubTitle>}
         </Title>
-      </div>
+      </TitleContainer>
 
-      <div ref={ref}>
+      <DrawerContainer ref={ref}>
         <DrawerTrigger onClick={handleDrawerToggle}>Les recettes</DrawerTrigger>
         <Drawer
           ref={ref}
@@ -109,7 +135,7 @@ const Header = ({ className }) => {
           isVisible={isDrawerVisible}
           recipes={recipes}
         />
-      </div>
+      </DrawerContainer>
     </HeaderWrapper>
   );
 };
