@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link, useRouteMatch } from "react-router-dom";
 
 import recipes from "recipes";
 
 import RecipeDrawer from "components/recipe-drawer.jsx";
 
-import logoChambi from "assets/image/logo/chambi.png";
+import logoChambi from "assets/image/logo/chambi_black.png";
 
 const HeaderWrapper = styled.header`
   position: sticky;
@@ -29,12 +29,35 @@ const TitleContainer = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.img`
+const shake = keyframes`
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+`;
+
+const LogoContainer = styled(Link)`
   display: none;
   @media screen and (min-width: 400px) {
     display: block;
-    width: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 15px;
+    &:hover {
+      animation: ${shake} 400ms infinite;
+    }
+  }
+`;
+
+const Logo = styled.img`
+    width: 50px;
   }
 `;
 
@@ -120,7 +143,9 @@ const Header = ({ className }) => {
   return (
     <HeaderWrapper className={className}>
       <TitleContainer>
-        <Logo src={logoChambi} alt="logo chambi cuisine" />
+        <LogoContainer to="/">
+          <Logo src={logoChambi} alt="logo chambi cuisine" />
+        </LogoContainer>
         <Title to="">
           <span>Chambi cuisine&nbsp;</span>
           {subTitle && <SubTitle>{subTitle}</SubTitle>}

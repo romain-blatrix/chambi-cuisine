@@ -24,7 +24,7 @@ const IngregientsWrapper = styled.div`
 
 const StyledIngredients = styled.ul`
   height: 100%;
-  padding-left: 15px;
+  padding-left: 18px;
 `;
 
 const IngredientsTrigger = styled.button`
@@ -45,6 +45,10 @@ const IngredientsTrigger = styled.button`
   }
 `;
 
+const Ingredient = styled.li`
+  margin-bottom: 5px;
+`;
+
 const Ingredients = ({ className, ingredients }) => {
   const ref = useRef(null);
   const [isIngredientsVisible, setIsIngredientsVisible] = useState(false);
@@ -63,7 +67,7 @@ const Ingredients = ({ className, ingredients }) => {
       </IngredientsTrigger>
       <StyledIngredients>
         {ingredients.map(ingredient => (
-          <li>{ingredient}</li>
+          <Ingredient>{ingredient}</Ingredient>
         ))}
       </StyledIngredients>
     </IngregientsWrapper>

@@ -26,12 +26,14 @@ const StepMark = styled.div`
   background: #e45b4e9e;
   position: absolute;
   text-align: center;
-  line-height: 30px;
+  line-height: 35px;
   letter-spacing: 1px;
   color: #f0f0f0;
-  top: 10px;
-  left: -30px;
+  top: 4px;
+  left: -28px;
   transform: rotate(-45deg);
+  user-select: none;
+  cursor: default;
 `;
 
 const Image = styled.img`
