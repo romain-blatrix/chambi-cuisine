@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chambi-cuisine/precache-manifest.dbbef2146092273cf61d545189fca9dd.js"
+  "/chambi-cuisine/precache-manifest.2fd9d6b0d4e123517aafa2886a0a91a1.js"
 );
 
 self.addEventListener('message', (event) => {

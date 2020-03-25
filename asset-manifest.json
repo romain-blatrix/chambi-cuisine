@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.71112b1f.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.71112b1f.chunk.js.map",
+    "main.js": "/chambi-cuisine/static/js/main.f1cd000d.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.f1cd000d.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.212b4651.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.212b4651.js.map",
     "static/js/2.d69a3ceb.chunk.js": "/chambi-cuisine/static/js/2.d69a3ceb.chunk.js",
@@ -22,13 +22,12 @@
     "static/js/9.9ed3cdf4.chunk.js": "/chambi-cuisine/static/js/9.9ed3cdf4.chunk.js",
     "static/js/9.9ed3cdf4.chunk.js.map": "/chambi-cuisine/static/js/9.9ed3cdf4.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.dbbef2146092273cf61d545189fca9dd.js": "/chambi-cuisine/precache-manifest.dbbef2146092273cf61d545189fca9dd.js",
+    "precache-manifest.2fd9d6b0d4e123517aafa2886a0a91a1.js": "/chambi-cuisine/precache-manifest.2fd9d6b0d4e123517aafa2886a0a91a1.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
     "static/css/main.cbd4699f.chunk.css.map": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css.map",
     "static/js/2.d69a3ceb.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.d69a3ceb.chunk.js.LICENSE.txt",
     "static/media/bouteille.png": "/chambi-cuisine/static/media/bouteille.fb1b86b6.png",
     "static/media/carotte.png": "/chambi-cuisine/static/media/carotte.7d378626.png",
-    "static/media/chambi.png": "/chambi-cuisine/static/media/chambi.12e9a224.png",
     "static/media/chambi.jpg": "/chambi-cuisine/static/media/chambi.fc773319.jpg",
     "static/media/couteau.png": "/chambi-cuisine/static/media/couteau.ebf4f37d.png",
     "static/media/cuillere.png": "/chambi-cuisine/static/media/cuillere.14069888.png",
@@ -48,6 +47,6 @@
     "static/js/runtime-main.212b4651.js",
     "static/js/2.d69a3ceb.chunk.js",
     "static/css/main.cbd4699f.chunk.css",
-    "static/js/main.71112b1f.chunk.js"
+    "static/js/main.f1cd000d.chunk.js"
   ]
 }
