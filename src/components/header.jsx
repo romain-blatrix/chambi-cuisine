@@ -39,20 +39,22 @@ const shake = keyframes`
 `;
 
 const LogoContainer = styled(Link)`
-  display: none;
-  @media screen and (min-width: 400px) {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+  @media (hover: hover) {
     &:hover {
       animation: ${shake} 400ms infinite;
     }
+  }
+  &:active {
+    animation: ${shake} 400ms infinite;
   }
 `;
 
@@ -61,18 +63,24 @@ const Logo = styled.img`
   }
 `;
 
+const SubTitle = styled.div`
+  font-size: 12px;
+  color: white;
+`;
+
 const Title = styled(Link)`
-  font-size: 24px;
+  @media screen and (min-width: 400px) {
+    font-size: 24px;
+    ${SubTitle} {
+      font-size: 18px;
+    }
+  }
+  font-size: 14px;
   color: white;
   text-decoration: none;
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
-`;
-
-const SubTitle = styled.div`
-  font-size: 18px;
-  color: white;
 `;
 
 const DrawerContainer = styled.div`
@@ -81,10 +89,13 @@ const DrawerContainer = styled.div`
 `;
 
 const DrawerTrigger = styled.button`
+  @media screen and (min-width: 400px) {
+    font-size: 15px;
+  }
   border: 1px solid white;
   border-radius: 3px;
   padding: 15px 20px;
-  font-size: 15px;
+  font-size: 12px;
   color: white;
   background-color: transparent;
   cursor: pointer;
