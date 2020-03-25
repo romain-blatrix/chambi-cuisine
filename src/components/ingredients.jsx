@@ -5,12 +5,12 @@ import useOnClickOutside from "hooks/click-outside.jsx";
 
 const IngregientsWrapper = styled.div`
   height: 100%;
-  width: 300px;
+  width: 260px;
   position: fixed;
   background-color: #e4bdcd;
   padding: 15px;
   z-index: 1;
-  transform: translateX(-300px);
+  transform: translateX(-260px);
   transition: transform 150ms ease-out;
   ${({ isVisible }) =>
     isVisible &&
