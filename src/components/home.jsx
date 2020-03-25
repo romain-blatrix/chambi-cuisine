@@ -10,6 +10,7 @@ const Content = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: left;
+  align-items: flex-start;
   max-width: 800px;
   margin: 0 auto;
   @media screen and (min-width: 400px) {
@@ -17,9 +18,26 @@ const Content = styled.div`
   }
 `;
 
-const RecipeListTitle = styled.h1``;
+const H1 = styled.h1`
+  z-index: 0;
+  white-space: nowrap;
+  &::after {
+    content: "";
+    width: 110%;
+    display: block;
+    height: 15px;
+    background-color: #cc769569;
+    margin-top: -14px;
+    margin-left: 10px;
+    transform: skew(-20deg);
+    border-radius: 2px;
+    z-index: -1;
+    position: relative;
+  }
+`;
 
 const HomeRecipeList = styled.div`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   grid-auto-rows: 1fr;
@@ -37,22 +55,15 @@ const HomeRecipeList = styled.div`
   }
 `;
 
-// const StyledLazyImage = styled(LazyImage)`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-// `;
-
 const Home = ({ className }) => {
   return (
     <Content>
-      Le projet
-      <br />
-      Qui sont-ils?
-      <br /> quoi d'autre ?<br />
-      <RecipeListTitle>Les recettes</RecipeListTitle>
+      <H1>Le projet</H1>
+      <div>Y'en a pas vraiment</div>
+      <H1>Qui sont-ils?</H1>
+      <div>Des burgonds libres</div>
+
+      <H1>Les recettes</H1>
       <HomeRecipeList>
         {recipes.map(({ title, id }) => (
           <HomeRecipe id={id} key={id} title={title} />
