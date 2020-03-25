@@ -6,6 +6,17 @@ import defaultImage from "assets/image/recipe/default.jpg";
 
 import useImage from "hooks/image-loader.jsx";
 
+const Title = styled.h2`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  left: 0;
+  padding: 5px;
+  background-color: #616161a8;
+  font-size: 20px;
+`;
+
 const StyledHomeRecipe = styled(Link)`
   position: relative;
   background-color: lightblue;
@@ -19,17 +30,17 @@ const StyledHomeRecipe = styled(Link)`
   background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   overflow: hidden;
-`;
+  opacity: 1;
+  transition: opacity 200ms ease;
 
-const Title = styled.h2`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  left: 0;
-  padding: 5px;
-  background-color: #616161a8;
-  font-size: 20px;
+  &:hover {
+    box-shadow: 3px 4px 8px 0 #737373;
+    transition: box-shadow 100ms ease;
+    ${Title} {
+      opacity: 0;
+      transition: opacity 400ms ease;
+    }
+  }
 `;
 
 const HomeRecipe = ({ className, id, title }) => {

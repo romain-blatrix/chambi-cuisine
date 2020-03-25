@@ -65,23 +65,34 @@ const Logo = styled.img`
 `;
 
 const SubTitle = styled.div`
-  font-size: 12px;
+  font-size: 16px;
   color: white;
+  i {
+    display: none;
+    @media screen and (min-width: 700px) {
+      display: inline;
+    }
+  }
 `;
 
 const Title = styled(Link)`
   @media screen and (min-width: 400px) {
-    font-size: 24px;
+    font-size: 38px;
     ${SubTitle} {
-      font-size: 18px;
+      font-size: 28px;
     }
   }
-  font-size: 14px;
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
+  font-family: "Parisienne";
+  font-size: 18px;
   color: white;
   text-decoration: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   align-items: baseline;
+  line-height: 1;
 `;
 
 const DrawerContainer = styled.div`
@@ -159,8 +170,13 @@ const Header = ({ className }) => {
           <Logo src={logoChambi} alt="logo chambi cuisine" />
         </LogoContainer>
         <Title to="">
-          <span>Chambi cuisine&nbsp;</span>
-          {subTitle && <SubTitle>{subTitle}</SubTitle>}
+          <span>Chambi cuisine</span>
+          {subTitle && (
+            <SubTitle>
+              <i>...&nbsp;</i>
+              {subTitle}
+            </SubTitle>
+          )}
         </Title>
       </TitleContainer>
 
