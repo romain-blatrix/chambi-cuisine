@@ -48,6 +48,7 @@ const LogoContainer = styled(Link)`
   justify-content: center;
   margin-right: 15px;
   flex-shrink: 0;
+  box-shadow: 0 0 7px 2px #0000004a;
   @media (hover: hover) {
     &:hover {
       animation: ${shake} 400ms infinite;
