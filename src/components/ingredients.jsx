@@ -56,6 +56,7 @@ const Logo = styled.div`
   height: 17px;
   width: 39px;
   flex-shrink: 0;
+  margin-top: 3px;
   background: url(${logo}) no-repeat;
   background-size: contain;
 `;
