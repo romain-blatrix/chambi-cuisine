@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Particles from "react-particles-js";
 
-import Bouteille from "assets/image/footer/bouteille.png";
 import Carotte from "assets/image/footer/carotte.png";
 import Couteau from "assets/image/footer/couteau.png";
 import Cuillere from "assets/image/footer/cuillere.png";
@@ -33,7 +32,7 @@ const Footer = ({ className }) => (
       params={{
         particles: {
           number: {
-            value: 10,
+            value: 14,
             density: {
               enable: false,
               value_area: 2004.2650760819035
@@ -43,11 +42,6 @@ const Footer = ({ className }) => (
             type: "images",
 
             images: [
-              {
-                src: Bouteille,
-                width: 75,
-                height: 243
-              },
               {
                 src: Carotte,
                 width: 120,
