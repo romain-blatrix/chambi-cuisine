@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7bc688a8f22657f63e321f04eec960b3",
+    "revision": "8c5a24ad7b10979bed6675c2f8bd3083",
     "url": "/chambi-cuisine/index.html"
   },
   {
-    "revision": "31c46ee32a0281ead319",
-    "url": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css"
+    "revision": "d9f38a7344ba16c590d4",
+    "url": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css"
   },
   {
     "revision": "afde125a8181016e3451",
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/13.1e9e7caa.chunk.js"
   },
   {
-    "revision": "73e0baf91271c7139047",
-    "url": "/chambi-cuisine/static/js/2.546f6a14.chunk.js"
+    "revision": "bbcb1df5c132113e4ff1",
+    "url": "/chambi-cuisine/static/js/2.73db9dca.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/chambi-cuisine/static/js/2.546f6a14.chunk.js.LICENSE.txt"
+    "url": "/chambi-cuisine/static/js/2.73db9dca.chunk.js.LICENSE.txt"
   },
   {
     "revision": "b6a93770b7ff66cae7e5",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/9.07b47207.chunk.js"
   },
   {
-    "revision": "31c46ee32a0281ead319",
-    "url": "/chambi-cuisine/static/js/main.c9411a88.chunk.js"
+    "revision": "d9f38a7344ba16c590d4",
+    "url": "/chambi-cuisine/static/js/main.7ef7b209.chunk.js"
   },
   {
     "revision": "31fe14e9fdcc0350e4c3",
