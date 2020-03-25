@@ -4,8 +4,6 @@ import styled, { keyframes } from "styled-components";
 import { ReactComponent as InstagramSvg } from "assets/svg/instagram.svg";
 import { ReactComponent as Heart } from "assets/svg/heart.svg";
 
-import Contact from "components/contact.jsx";
-
 const Wrapper = styled.div`
   position: relative;
   height: ${({ theme }) => theme.footerHeight};

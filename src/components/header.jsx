@@ -4,7 +4,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 
 import recipes from "recipes";
 
-import Drawer from "components/drawer.jsx";
+import RecipeDrawer from "components/recipe-drawer.jsx";
 
 import logoChambi from "assets/image/logo/chambi.png";
 
@@ -129,7 +129,7 @@ const Header = ({ className }) => {
 
       <DrawerContainer ref={ref}>
         <DrawerTrigger onClick={handleDrawerToggle}>Les recettes</DrawerTrigger>
-        <Drawer
+        <RecipeDrawer
           ref={ref}
           closeDrawer={closeDrawer}
           isVisible={isDrawerVisible}
