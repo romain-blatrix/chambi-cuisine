@@ -56,8 +56,7 @@ const Logo = styled.div`
   height: 17px;
   width: 39px;
   flex-shrink: 0;
-  background: url(/chambi-cuisine/static/media/chambi_black.f51d06d7.png)
-    no-repeat;
+  background: url(${logo}) no-repeat;
   background-size: contain;
 `;
 

@@ -38,11 +38,15 @@ const StepMark = styled.div`
 
 const Title = styled.h3`
   z-index: 0;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.2px;
+  white-space: nowrap;
+  @media screen and (min-width: 400px) {
+    font-size: 24px;
+  }
   &::after {
     content: "";
-    width: 110%;
+    width: 105%;
     display: block;
     height: 10px;
     background-color: #cc769569;
