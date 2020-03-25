@@ -1,2 +1,0 @@
-(this["webpackJsonpchambi-cuisine"]=this["webpackJsonpchambi-cuisine"]||[]).push([[5],{51:function(i,c,s){i.exports=s.p+"static/media/main.c03df2a1.jpg"}}]);
-//# sourceMappingURL=5.0fa35ea7.chunk.js.map
