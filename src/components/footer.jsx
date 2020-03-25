@@ -2,12 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import Particles from "react-particles-js";
 
+import Bouteille from "assets/image/footer/bouteille.png";
+import Carotte from "assets/image/footer/carotte.png";
+import Couteau from "assets/image/footer/couteau.png";
+import Cuillere from "assets/image/footer/cuillere.png";
+import Fouet from "assets/image/footer/fouet.png";
+import Navet from "assets/image/footer/navet.png";
+import Oeuf from "assets/image/footer/oeuf.png";
+import Oignon from "assets/image/footer/oignons.png";
+
 const FooterWrapper = styled.footer`
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: ${({ theme }) => theme.footerHeight};
+  height: 400px;
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -35,16 +44,44 @@ const Footer = ({ className }) => (
 
             images: [
               {
-                src:
-                  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Emoji_u1f955.svg/1200px-Emoji_u1f955.svg.png",
-                width: 3,
-                height: 3
+                src: Bouteille,
+                width: 75,
+                height: 243
               },
               {
-                src:
-                  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1200px-Rotten_Tomatoes.svg.png",
-                width: 3,
-                height: 3
+                src: Carotte,
+                width: 120,
+                height: 199
+              },
+              {
+                src: Couteau,
+                width: 200,
+                height: 180
+              },
+              {
+                src: Cuillere,
+                width: 200,
+                height: 226
+              },
+              {
+                src: Fouet,
+                width: 200,
+                height: 192
+              },
+              {
+                src: Navet,
+                width: 200,
+                height: 358
+              },
+              {
+                src: Oeuf,
+                width: 200,
+                height: 108
+              },
+              {
+                src: Oignon,
+                width: 200,
+                height: 216
               }
             ]
           },
@@ -59,7 +96,7 @@ const Footer = ({ className }) => (
             }
           },
           size: {
-            value: 160,
+            value: 80,
             random: true,
             anim: {
               enable: true,

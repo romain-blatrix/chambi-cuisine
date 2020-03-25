@@ -6,7 +6,7 @@ import recipes from "recipes";
 
 import Drawer from "components/drawer.jsx";
 
-import logoChambi from "assets/image/logo/chambi.jpg";
+import logoChambi from "assets/image/logo/chambi.png";
 
 const HeaderWrapper = styled.header`
   position: sticky;
