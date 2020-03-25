@@ -11,11 +11,13 @@ const Recipe = ({ className }) => {
   const currentRecipe = recipes.find(recipe => recipe.id === id);
   const nbOfSteps = currentRecipe.steps.length;
 
-  const ingredients = currentRecipe.ingredients;
+  const { ingredients, nbPeople } = currentRecipe;
 
   return (
     <>
-      {ingredients && <Ingredients ingredients={ingredients} />}
+      {ingredients && (
+        <Ingredients ingredients={ingredients} nbPeople={nbPeople} />
+      )}
       {currentRecipe.steps.map(({ description, imageUrl, title }, index) => (
         <RecipeStep
           key={`currentRecipe.id_${index}`}

@@ -23,6 +23,11 @@ const IngregientsWrapper = styled.div`
     `}
 `;
 
+const Title = styled.div`
+  margin: 5px 0 15px;
+  font-weight: 700;
+`;
+
 const StyledIngredients = styled.ul`
   height: 100%;
   margin: 0;
@@ -69,7 +74,7 @@ const Ingredient = styled.li`
   justify-content: flex-start;
 `;
 
-const Ingredients = ({ className, ingredients }) => {
+const Ingredients = ({ className, ingredients, nbPeople }) => {
   const ref = useRef(null);
   const [isIngredientsVisible, setIsIngredientsVisible] = useState(false);
 
@@ -82,6 +87,7 @@ const Ingredients = ({ className, ingredients }) => {
 
   return (
     <IngregientsWrapper ref={ref} isVisible={isIngredientsVisible}>
+      <Title>Ingrédients{nbPeople && ` pour ${nbPeople} personnes :`}</Title>
       <IngredientsTrigger onClick={handleIngredientsToggle}>
         Ingredients
       </IngredientsTrigger>

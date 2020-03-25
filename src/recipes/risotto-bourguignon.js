@@ -5,16 +5,17 @@ const risottoBourguignon = {
   title: "Risotto bourguignon",
   headerTitle: "un risotto bourguignon",
   ingredients: [
-    "1 bouteille de vin rouge (type Malbec ou Syrah), 60 cl pour la recette, le reste pour le cuisinier",
-    "25 cl de fond de veau",
+    "1 bouteille de vin rouge (type Malbec ou Syrah), 60cl pour la recette, le reste pour le cuisinier",
+    "25cl de fond de veau",
     "200g de riz arborio (riz à risotto)",
     "2 carottes",
     "2 échalotes",
     "25 petits oignons grelots",
     "20 champignons de Paris boutons (des petits champignons)",
     "100g de lardons",
-    "30 g de beurre"
+    "30g de beurre"
   ],
+  nbPeople: 4,
   steps: [
     {
       title: "Préparation du bouillon 1/3",
