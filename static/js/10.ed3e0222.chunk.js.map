@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/image/recipe/risotto-bourguignon/main.jpg"],"names":["module","exports"],"mappings":"2GAAAA,EAAOC,QAAU,IAA0B","file":"static/js/10.ed3e0222.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/main.90f63d02.jpg\";"],"sourceRoot":""}
