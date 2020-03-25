@@ -56,7 +56,7 @@ const RecipeLink = styled(NavLink)`
 
   &.active {
     transition: color 300ms ease, background-color 300ms ease;
-    background-color: #377086;
+    background-color: #9c6888;
   }
 
   &:focus {

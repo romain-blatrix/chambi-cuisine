@@ -3,13 +3,16 @@ import styled, { css } from "styled-components";
 
 import useOnClickOutside from "hooks/click-outside.jsx";
 
+import logo from "assets/image/logo/chambi_black.png";
+
 const IngregientsWrapper = styled.div`
-  height: 100%;
+  height: calc(100vh - ${({ theme }) => theme.headerHeight});
   width: 260px;
   position: fixed;
   background-color: #e4bdcd;
   padding: 15px;
   z-index: 1;
+  box-shadow: 0px 0px 6px 2px #0000003b;
   transform: translateX(-260px);
   transition: transform 150ms ease-out;
   ${({ isVisible }) =>
@@ -22,7 +25,9 @@ const IngregientsWrapper = styled.div`
 
 const StyledIngredients = styled.ul`
   height: 100%;
-  padding-left: 18px;
+  margin: 0;
+  padding-left: 10px;
+  overflow: auto;
 `;
 
 const IngredientsTrigger = styled.button`
@@ -32,19 +37,36 @@ const IngredientsTrigger = styled.button`
   right: -65px;
   top: calc(50vh - 50px);
   z-index: 1;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2px;
   transform: rotate(90deg);
   transform-origin: 50% 50%;
   background-color: #e4bdcd;
   border-radius: 3px 3px 0 0;
   border: 0;
   cursor: pointer;
+  box-shadow: 1px -3px 3px 0px #00000021;
   &:focus {
     outline: 0;
   }
 `;
 
+const Logo = styled.div`
+  height: 17px;
+  width: 39px;
+  flex-shrink: 0;
+  background: url(/chambi-cuisine/static/media/chambi_black.f51d06d7.png)
+    no-repeat;
+  background-size: contain;
+`;
+
 const Ingredient = styled.li`
-  margin-bottom: 5px;
+  margin-bottom: 12px;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const Ingredients = ({ className, ingredients }) => {
@@ -65,7 +87,10 @@ const Ingredients = ({ className, ingredients }) => {
       </IngredientsTrigger>
       <StyledIngredients>
         {ingredients.map((ingredient, index) => (
-          <Ingredient key={`ingredient${index}`}>{ingredient}</Ingredient>
+          <Ingredient key={`ingredient${index}`}>
+            <Logo />
+            {ingredient}
+          </Ingredient>
         ))}
       </StyledIngredients>
     </IngregientsWrapper>

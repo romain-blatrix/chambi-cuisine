@@ -16,7 +16,7 @@ const StepContainer = styled.div`
   position: relative;
   background-color: white;
   overflow: hidden;
-  padding: 15px;
+  padding: 15px 25px;
   text-align: center;
 `;
 
@@ -34,6 +34,25 @@ const StepMark = styled.div`
   transform: rotate(-45deg);
   user-select: none;
   cursor: default;
+`;
+
+const Title = styled.h3`
+  z-index: 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  &::after {
+    content: "";
+    width: 110%;
+    display: block;
+    height: 10px;
+    background-color: #cc769569;
+    margin-top: -7px;
+    margin-left: 10px;
+    transform: skew(-20deg);
+    border-radius: 2px;
+    z-index: -1;
+    position: relative;
+  }
 `;
 
 const Image = styled.img`
@@ -55,7 +74,7 @@ const RecipeStep = ({
   return (
     <StepContainer>
       <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
-      <h3>{title}</h3>
+      <Title>{title}</Title>
       <div>{description}</div>
       <Image src={status === "loaded" ? image : defaultImage} />
     </StepContainer>
