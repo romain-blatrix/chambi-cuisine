@@ -72,12 +72,12 @@ const ContactLink = styled.a`
     top: 0;
     left: 0;
     border-style: solid;
-    border-width: 20px 45px 0 45px;
+    border-width: 20px 44px 0 44px;
     border-color: lightgray transparent transparent transparent;
     opacity: 0;
   }
   &:hover {
-    border-radius: 2px;
+    border-radius: 4px;
     border-color: lightgray;
     background-color: white;
     transition: all 300ms ease;
@@ -107,7 +107,7 @@ const Home = ({ className }) => {
         ))}
       </HomeRecipeList>
       <H1>Contact</H1>
-      <ContactLink href="mailto:romain.blatrix@gmail.com?cc=chambriermatthieu@gmail.com&tommydessine@gmail.com">
+      <ContactLink href="mailto:romain.blatrix@gmail.com?cc=chambriermatthieu@gmail.com&cc=tommydessine@gmail.com">
         <span>Par mail</span>
       </ContactLink>
     </Content>
