@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1c1abb722d7e7b72aa22f69976e1b455",
+    "revision": "fe19f368b5fcfa0eaf04e3a59f5e51f9",
     "url": "/chambi-cuisine/index.html"
   },
   {
-    "revision": "518394e812723684a17f",
+    "revision": "b754eed01ae7ebfc2fa0",
     "url": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css"
   },
   {
@@ -60,20 +60,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/9.07b47207.chunk.js"
   },
   {
-    "revision": "518394e812723684a17f",
-    "url": "/chambi-cuisine/static/js/main.48066035.chunk.js"
+    "revision": "b754eed01ae7ebfc2fa0",
+    "url": "/chambi-cuisine/static/js/main.8a4c944d.chunk.js"
   },
   {
     "revision": "31fe14e9fdcc0350e4c3",
     "url": "/chambi-cuisine/static/js/runtime-main.b3f21ec9.js"
   },
   {
-    "revision": "fb1b86b6cbdde7165505c2457b621eda",
-    "url": "/chambi-cuisine/static/media/bouteille.fb1b86b6.png"
+    "revision": "85a0587937373016c724973ff522eb85",
+    "url": "/chambi-cuisine/static/media/bouteille.85a05879.png"
   },
   {
-    "revision": "7d37862631d4ad81b36c4bbe1270c8d0",
-    "url": "/chambi-cuisine/static/media/carotte.7d378626.png"
+    "revision": "8a83c94500d303df4d6de686a0489772",
+    "url": "/chambi-cuisine/static/media/carotte.8a83c945.png"
   },
   {
     "revision": "fc7733196b1080356064e3c5ce8f7652",
