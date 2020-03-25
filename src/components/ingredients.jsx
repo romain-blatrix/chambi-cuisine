@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import styled, { css } from "styled-components";
 
-import { NavLink } from "react-router-dom";
-
 import useOnClickOutside from "hooks/click-outside.jsx";
 
 const IngregientsWrapper = styled.div`
@@ -66,8 +64,8 @@ const Ingredients = ({ className, ingredients }) => {
         Ingredients
       </IngredientsTrigger>
       <StyledIngredients>
-        {ingredients.map(ingredient => (
-          <Ingredient>{ingredient}</Ingredient>
+        {ingredients.map((ingredient, index) => (
+          <Ingredient key={`ingredient${index}`}>{ingredient}</Ingredient>
         ))}
       </StyledIngredients>
     </IngregientsWrapper>
