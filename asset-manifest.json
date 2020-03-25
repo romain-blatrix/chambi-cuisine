@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.a07ec033.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.a07ec033.chunk.js.map",
+    "main.js": "/chambi-cuisine/static/js/main.aef4fc99.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.aef4fc99.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.b3f21ec9.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.b3f21ec9.js.map",
     "static/js/2.d42020f6.chunk.js": "/chambi-cuisine/static/js/2.d42020f6.chunk.js",
@@ -30,14 +30,13 @@
     "static/js/13.1e9e7caa.chunk.js": "/chambi-cuisine/static/js/13.1e9e7caa.chunk.js",
     "static/js/13.1e9e7caa.chunk.js.map": "/chambi-cuisine/static/js/13.1e9e7caa.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.fbbda5c8630b11ee2c06788554bdb1bd.js": "/chambi-cuisine/precache-manifest.fbbda5c8630b11ee2c06788554bdb1bd.js",
+    "precache-manifest.9c5f9a5fddb072ef0194d8a27898148a.js": "/chambi-cuisine/precache-manifest.9c5f9a5fddb072ef0194d8a27898148a.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
     "static/css/main.cbd4699f.chunk.css.map": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css.map",
     "static/js/2.d42020f6.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.d42020f6.chunk.js.LICENSE.txt",
     "static/media/bouteille.png": "/chambi-cuisine/static/media/bouteille.fb1b86b6.png",
     "static/media/carotte.png": "/chambi-cuisine/static/media/carotte.7d378626.png",
     "static/media/chambi.jpg": "/chambi-cuisine/static/media/chambi.fc773319.jpg",
-    "static/media/chambi_black.png": "/chambi-cuisine/static/media/chambi_black.f0eba197.png",
     "static/media/couteau.png": "/chambi-cuisine/static/media/couteau.ebf4f37d.png",
     "static/media/cuillere.png": "/chambi-cuisine/static/media/cuillere.14069888.png",
     "static/media/default.jpg": "/chambi-cuisine/static/media/default.fc773319.jpg",
@@ -56,6 +55,6 @@
     "static/js/runtime-main.b3f21ec9.js",
     "static/js/2.d42020f6.chunk.js",
     "static/css/main.cbd4699f.chunk.css",
-    "static/js/main.a07ec033.chunk.js"
+    "static/js/main.aef4fc99.chunk.js"
   ]
 }
