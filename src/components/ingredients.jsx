@@ -7,13 +7,13 @@ import logo from "assets/image/logo/chambi_black.png";
 
 const IngregientsWrapper = styled.div`
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
-  width: 260px;
+  width: 280px;
   position: fixed;
   background-color: #e4bdcd;
   padding: 15px;
   z-index: 1;
   box-shadow: 0px 0px 6px 2px #0000003b;
-  transform: translateX(-260px);
+  transform: translateX(-280px);
   transition: transform 150ms ease-out;
   ${({ isVisible }) =>
     isVisible &&
