@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f64f2df4d8f59964ba31dd6b65810e8",
+    "revision": "763371c208e4685794e5aabcfb75e552",
     "url": "/chambi-cuisine/index.html"
   },
   {
-    "revision": "32c0929050df9c18479c",
+    "revision": "fc4f05d6e79dbb5a8f4d",
     "url": "/chambi-cuisine/static/css/main.cbd4699f.chunk.css"
   },
   {
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/13.1e9e7caa.chunk.js"
   },
   {
-    "revision": "64bf27271364d7dbde79",
-    "url": "/chambi-cuisine/static/js/2.d42020f6.chunk.js"
+    "revision": "73e0baf91271c7139047",
+    "url": "/chambi-cuisine/static/js/2.546f6a14.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/chambi-cuisine/static/js/2.d42020f6.chunk.js.LICENSE.txt"
+    "url": "/chambi-cuisine/static/js/2.546f6a14.chunk.js.LICENSE.txt"
   },
   {
     "revision": "b6a93770b7ff66cae7e5",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/9.07b47207.chunk.js"
   },
   {
-    "revision": "32c0929050df9c18479c",
-    "url": "/chambi-cuisine/static/js/main.120eb7cd.chunk.js"
+    "revision": "fc4f05d6e79dbb5a8f4d",
+    "url": "/chambi-cuisine/static/js/main.f3777798.chunk.js"
   },
   {
     "revision": "31fe14e9fdcc0350e4c3",
