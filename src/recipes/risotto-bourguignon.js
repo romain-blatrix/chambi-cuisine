@@ -50,12 +50,14 @@ const risottoBourguignon = {
     },
     {
       title: "Préparation de la garniture 4/5",
-      description: "Tailler la poitrine fumée en petits lardons "
+      description: "Tailler la poitrine fumée en petits lardons",
+      imageUrl: `${id}/step2_4.jpg`
     },
     {
       title: "Préparation de la garniture 5/5",
       description:
-        "Eplucher les oignons grelots (astuce du chef : recouvrir les oignons d’eau bouillante, ils seront plus faciles à éplucher)"
+        "Eplucher les oignons grelots (astuce du chef : recouvrir les oignons d’eau bouillante, ils seront plus faciles à éplucher)",
+      imageUrl: `${id}/step2_5.jpg`
     },
     {
       title: "Préparation des oignons grelots 1/4",

@@ -32,7 +32,7 @@ const Footer = ({ className }) => (
       params={{
         particles: {
           number: {
-            value: 14,
+            value: 10,
             density: {
               enable: false,
               value_area: 2004.2650760819035
