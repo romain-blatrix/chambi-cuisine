@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ec827d342bcf87957363925ffab9888",
+    "revision": "ef771f3f3b4bfd9850f7474eab5d7361",
     "url": "/chambi-cuisine/index.html"
   },
   {
-    "revision": "135c65b44371061a3372",
+    "revision": "da318191165e8be0989a",
     "url": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css"
   },
   {
@@ -40,12 +40,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/17.341cb9a5.chunk.js"
   },
   {
-    "revision": "924841ad1db11f71ebef",
-    "url": "/chambi-cuisine/static/js/2.ccd9d24b.chunk.js"
+    "revision": "6a59e9d7d85985d423bf",
+    "url": "/chambi-cuisine/static/js/18.237b3ef3.chunk.js"
+  },
+  {
+    "revision": "52a0e155a11d18305161",
+    "url": "/chambi-cuisine/static/js/19.353b6284.chunk.js"
+  },
+  {
+    "revision": "c1eab0abd49ed8cee18d",
+    "url": "/chambi-cuisine/static/js/2.3c030c09.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/chambi-cuisine/static/js/2.ccd9d24b.chunk.js.LICENSE.txt"
+    "url": "/chambi-cuisine/static/js/2.3c030c09.chunk.js.LICENSE.txt"
   },
   {
     "revision": "3f8b8ce01a5d4d50976d",
@@ -76,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/9.6779f50c.chunk.js"
   },
   {
-    "revision": "135c65b44371061a3372",
-    "url": "/chambi-cuisine/static/js/main.1f848e2f.chunk.js"
+    "revision": "da318191165e8be0989a",
+    "url": "/chambi-cuisine/static/js/main.fa660c6e.chunk.js"
   },
   {
-    "revision": "239c94b389e31ae555bc",
-    "url": "/chambi-cuisine/static/js/runtime-main.55df44db.js"
+    "revision": "886ab9dadbc2f70e8415",
+    "url": "/chambi-cuisine/static/js/runtime-main.ae052e82.js"
   },
   {
     "revision": "8a83c94500d303df4d6de686a0489772",
@@ -182,5 +190,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0992b6d29c2d7427fca255e070154c9c",
     "url": "/chambi-cuisine/static/media/step2_3.0992b6d2.jpg"
+  },
+  {
+    "revision": "2fa27d8f50c6ea1d0340a93d275e16cd",
+    "url": "/chambi-cuisine/static/media/step2_4.2fa27d8f.jpg"
+  },
+  {
+    "revision": "8bb484ca073b640c7349f3754bea9688",
+    "url": "/chambi-cuisine/static/media/step2_5.8bb484ca.jpg"
   }
 ]);
