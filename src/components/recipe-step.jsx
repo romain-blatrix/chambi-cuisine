@@ -7,7 +7,7 @@ import defaultImage from "assets/image/recipe/default.jpg";
 
 const StepContainer = styled.div`
   scroll-snap-align: start;
-  min-height: 100%;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-flow: column nowrap;
@@ -60,8 +60,8 @@ const Title = styled.h3`
 `;
 
 const Image = styled.img`
-  max-width: 500px;
-  width: 100%;
+  max-width: 100%;
+  max-height: 70%;
 `;
 
 const RecipeStep = ({
