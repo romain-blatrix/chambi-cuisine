@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.3a7fe8f9.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.3a7fe8f9.chunk.js.map",
-    "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.715f96e4.js",
-    "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.715f96e4.js.map",
+    "main.js": "/chambi-cuisine/static/js/main.63470b6a.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.63470b6a.chunk.js.map",
+    "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.6a5fcc8d.js",
+    "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.6a5fcc8d.js.map",
     "static/js/2.cfd0c737.chunk.js": "/chambi-cuisine/static/js/2.cfd0c737.chunk.js",
     "static/js/2.cfd0c737.chunk.js.map": "/chambi-cuisine/static/js/2.cfd0c737.chunk.js.map",
     "static/js/3.53a0bf1d.chunk.js": "/chambi-cuisine/static/js/3.53a0bf1d.chunk.js",
@@ -23,14 +23,20 @@
     "static/js/9.44f4146e.chunk.js.map": "/chambi-cuisine/static/js/9.44f4146e.chunk.js.map",
     "static/js/10.da5ac7af.chunk.js": "/chambi-cuisine/static/js/10.da5ac7af.chunk.js",
     "static/js/10.da5ac7af.chunk.js.map": "/chambi-cuisine/static/js/10.da5ac7af.chunk.js.map",
-    "static/js/11.a8352e38.chunk.js": "/chambi-cuisine/static/js/11.a8352e38.chunk.js",
-    "static/js/11.a8352e38.chunk.js.map": "/chambi-cuisine/static/js/11.a8352e38.chunk.js.map",
-    "static/js/12.db2b958d.chunk.js": "/chambi-cuisine/static/js/12.db2b958d.chunk.js",
-    "static/js/12.db2b958d.chunk.js.map": "/chambi-cuisine/static/js/12.db2b958d.chunk.js.map",
-    "static/js/13.980f6a3d.chunk.js": "/chambi-cuisine/static/js/13.980f6a3d.chunk.js",
-    "static/js/13.980f6a3d.chunk.js.map": "/chambi-cuisine/static/js/13.980f6a3d.chunk.js.map",
+    "static/js/11.12015528.chunk.js": "/chambi-cuisine/static/js/11.12015528.chunk.js",
+    "static/js/11.12015528.chunk.js.map": "/chambi-cuisine/static/js/11.12015528.chunk.js.map",
+    "static/js/12.be271ebf.chunk.js": "/chambi-cuisine/static/js/12.be271ebf.chunk.js",
+    "static/js/12.be271ebf.chunk.js.map": "/chambi-cuisine/static/js/12.be271ebf.chunk.js.map",
+    "static/js/13.a49a8c94.chunk.js": "/chambi-cuisine/static/js/13.a49a8c94.chunk.js",
+    "static/js/13.a49a8c94.chunk.js.map": "/chambi-cuisine/static/js/13.a49a8c94.chunk.js.map",
+    "static/js/14.cb61b9e7.chunk.js": "/chambi-cuisine/static/js/14.cb61b9e7.chunk.js",
+    "static/js/14.cb61b9e7.chunk.js.map": "/chambi-cuisine/static/js/14.cb61b9e7.chunk.js.map",
+    "static/js/15.06df1e77.chunk.js": "/chambi-cuisine/static/js/15.06df1e77.chunk.js",
+    "static/js/15.06df1e77.chunk.js.map": "/chambi-cuisine/static/js/15.06df1e77.chunk.js.map",
+    "static/js/16.53a5652d.chunk.js": "/chambi-cuisine/static/js/16.53a5652d.chunk.js",
+    "static/js/16.53a5652d.chunk.js.map": "/chambi-cuisine/static/js/16.53a5652d.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.5ccdec8a97e38f8221c14a8f7e39b6bd.js": "/chambi-cuisine/precache-manifest.5ccdec8a97e38f8221c14a8f7e39b6bd.js",
+    "precache-manifest.ee420badb0c9cda0f7d331b591422b4d.js": "/chambi-cuisine/precache-manifest.ee420badb0c9cda0f7d331b591422b4d.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
     "static/css/main.f0ede8e2.chunk.css.map": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css.map",
     "static/js/2.cfd0c737.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.cfd0c737.chunk.js.LICENSE.txt",
@@ -49,12 +55,15 @@
     "static/media/oignons.png": "/chambi-cuisine/static/media/oignons.e065b230.png",
     "static/media/step1_1.jpg": "/chambi-cuisine/static/media/step1_1.fefe6ea3.jpg",
     "static/media/step1_2.jpg": "/chambi-cuisine/static/media/step1_2.d3a24cc1.jpg",
-    "static/media/step1_3.jpg": "/chambi-cuisine/static/media/step1_3.06046fd5.jpg"
+    "static/media/step1_3.jpg": "/chambi-cuisine/static/media/step1_3.cc3f956b.jpg",
+    "static/media/step2_1.jpg": "/chambi-cuisine/static/media/step2_1.95db43fa.jpg",
+    "static/media/step2_2.jpg": "/chambi-cuisine/static/media/step2_2.b9cb6af6.jpg",
+    "static/media/step2_3.jpg": "/chambi-cuisine/static/media/step2_3.0992b6d2.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.715f96e4.js",
+    "static/js/runtime-main.6a5fcc8d.js",
     "static/js/2.cfd0c737.chunk.js",
     "static/css/main.f0ede8e2.chunk.css",
-    "static/js/main.3a7fe8f9.chunk.js"
+    "static/js/main.63470b6a.chunk.js"
   ]
 }
