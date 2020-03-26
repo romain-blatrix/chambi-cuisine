@@ -27,12 +27,6 @@ const hide = keyframes`
   }
 `;
 
-const Wrapper = styled.div`
-  /* scroll-snap-align: start;
-  min-height: 100%;
-  background-color: white; */
-`;
-
 const Content = styled.div`
   padding: 15px;
   display: flex;
@@ -144,60 +138,57 @@ const ContactLink = styled.a`
 
 const Home = ({ className, animationState }) => {
   return (
-    <Wrapper>
-      <Content animationState={animationState}>
-        <H1>Le projet</H1>
-        <div>
-          <p>
-            Conjonction des cerveaux féconds de 3 amis en manque de code, de
-            dessin et de cuisine, ce projet a pour vocation de permettre à tous
-            de faire entrer la canaillerie dans le quotidien.
-          </p>
-          <p>
-            Loin des standards des guides de cuisine ou des tutoriels en tout
-            genre, ce projet se veut autant ludique que lubrique. Ici pas de
-            place pour le calcul calorique et les néologismes finissant en «
-            isme », ce que nous proposons est une cuisine identifiable avec « du
-            beurre, de la crème, des os et des arêtes » comme le défendait le
-            regretté Paul Bocuse.
-          </p>
-          <p>
-            Que vous soyez des cordons bleus en herbe, des bec fins, des
-            épicuriens ventripotents ou de simple curieux, vous trouverez sur ce
-            site de quoi combler votre faim et même plus encore.
-          </p>
-          <p>
-            Soyez curieux, soyez gourmands, faites-vous plaisir et n’oubliez pas
-            que « la cuisine est l’art de transformer instantanément en joie des
-            produits chargés d’histoire »
-          </p>
-        </div>
-        <H1>Qui sont-ils?</H1>
-        <div>
-          Des burgonds libres. Chambi cuisine, Tommy dessine et Romain
-          développe.
-        </div>
+    <Content animationState={animationState}>
+      <H1>Le projet</H1>
+      <div>
+        <p>
+          Conjonction des cerveaux féconds de 3 amis en manque de code, de
+          dessin et de cuisine, ce projet a pour vocation de permettre à tous de
+          faire entrer la canaillerie dans le quotidien.
+        </p>
+        <p>
+          Loin des standards des guides de cuisine ou des tutoriels en tout
+          genre, ce projet se veut autant ludique que lubrique. Ici pas de place
+          pour le calcul calorique et les néologismes finissant en « isme », ce
+          que nous proposons est une cuisine identifiable avec « du beurre, de
+          la crème, des os et des arêtes » comme le défendait le regretté Paul
+          Bocuse.
+        </p>
+        <p>
+          Que vous soyez des cordons bleus en herbe, des bec fins, des
+          épicuriens ventripotents ou de simple curieux, vous trouverez sur ce
+          site de quoi combler votre faim et même plus encore.
+        </p>
+        <p>
+          Soyez curieux, soyez gourmands, faites-vous plaisir et n’oubliez pas
+          que « la cuisine est l’art de transformer instantanément en joie des
+          produits chargés d’histoire ».
+        </p>
+      </div>
+      <H1>Qui sont-ils?</H1>
+      <div>
+        Des Burgonds libres. Chambi cuisine, Tommy dessine et Romain développe.
+      </div>
 
-        <H1>Les recettes</H1>
-        <HomeRecipeList>
-          {recipes.map(({ title, id }) => (
-            <HomeRecipe id={id} key={id} title={title} />
-          ))}
-        </HomeRecipeList>
-        <H1>Contact</H1>
-        <ContactWrapper>
-          <ContactLink href="mailto:romain.blatrix@gmail.com?cc=chambriermatthieu@gmail.com&cc=tommydessine@gmail.com">
-            <span>Par mail</span>
-          </ContactLink>
-          <ContactLink
-            href="https://viralviralvideos.com/wp-content/uploads/2017/05/GIF-laughing-funny-LOL-haha-hehe-hilarious-fun-happy-laugh-Kevin-Malone-Brian-Baumgartner-The-Office-GIF.gif"
-            target="_blank"
-          >
-            <span>Sur TikTok</span>
-          </ContactLink>
-        </ContactWrapper>
-      </Content>
-    </Wrapper>
+      <H1>Les recettes</H1>
+      <HomeRecipeList>
+        {recipes.map(({ title, id }) => (
+          <HomeRecipe id={id} key={id} title={title} />
+        ))}
+      </HomeRecipeList>
+      <H1>Contact</H1>
+      <ContactWrapper>
+        <ContactLink href="mailto:romain.blatrix@gmail.com?cc=chambriermatthieu@gmail.com&cc=tommydessine@gmail.com">
+          <span>Par mail</span>
+        </ContactLink>
+        <ContactLink
+          href="https://viralviralvideos.com/wp-content/uploads/2017/05/GIF-laughing-funny-LOL-haha-hehe-hilarious-fun-happy-laugh-Kevin-Malone-Brian-Baumgartner-The-Office-GIF.gif"
+          target="_blank"
+        >
+          <span>Sur TikTok</span>
+        </ContactLink>
+      </ContactWrapper>
+    </Content>
   );
 };
 
