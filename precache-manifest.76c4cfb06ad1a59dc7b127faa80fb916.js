@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd85a1701e41bd3e02671f08d9b357c5",
+    "revision": "307ba7eb8a484e05cb382159bfa96235",
     "url": "/chambi-cuisine/index.html"
   },
   {
-    "revision": "8822515c0c00b4830948",
+    "revision": "77f818d92e3a09672452",
     "url": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css"
   },
   {
-    "revision": "313d033de20f177ad95e",
-    "url": "/chambi-cuisine/static/js/10.da5ac7af.chunk.js"
+    "revision": "d0274029715cc0fa5307",
+    "url": "/chambi-cuisine/static/js/10.fab29f8e.chunk.js"
   },
   {
     "revision": "9160699aaae124a26b08",
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/js/9.44f4146e.chunk.js"
   },
   {
-    "revision": "8822515c0c00b4830948",
-    "url": "/chambi-cuisine/static/js/main.eed66195.chunk.js"
+    "revision": "77f818d92e3a09672452",
+    "url": "/chambi-cuisine/static/js/main.d473f8cf.chunk.js"
   },
   {
-    "revision": "9409e459da068cf5960d",
-    "url": "/chambi-cuisine/static/js/runtime-main.6a5fcc8d.js"
+    "revision": "508e316523dcd00b2e93",
+    "url": "/chambi-cuisine/static/js/runtime-main.ae8e01dc.js"
   },
   {
     "revision": "8a83c94500d303df4d6de686a0489772",
@@ -116,8 +116,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chambi-cuisine/static/media/instagram.92c8f04a.svg"
   },
   {
-    "revision": "90f63d02d2136e5529af3a4d66806430",
-    "url": "/chambi-cuisine/static/media/main.90f63d02.jpg"
+    "revision": "39a67e79cd7954689692aff2c84eb318",
+    "url": "/chambi-cuisine/static/media/main.39a67e79.jpg"
   },
   {
     "revision": "c03df2a184df1213e1cdb60092115602",
