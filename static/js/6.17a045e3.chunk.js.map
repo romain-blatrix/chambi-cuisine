@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/image/recipe/magret-canard/main.jpg"],"names":["module","exports"],"mappings":"0GAAAA,EAAOC,QAAU,IAA0B","file":"static/js/6.17a045e3.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/main.c603c5ef.jpg\";"],"sourceRoot":""}
