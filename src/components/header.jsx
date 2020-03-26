@@ -76,14 +76,18 @@ const SubTitle = styled.div`
 `;
 
 const Title = styled(Link)`
-  @media screen and (min-width: 400px) {
-    font-size: 38px;
+  @media screen and (min-width: 370px) {
+    font-size: 24px;
     ${SubTitle} {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
   @media screen and (min-width: 700px) {
     flex-direction: row;
+    font-size: 38px;
+    ${SubTitle} {
+      font-size: 28px;
+    }
   }
   font-family: "Parisienne";
   font-size: 18px;
