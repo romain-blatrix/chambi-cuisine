@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.7bf595ce.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.7bf595ce.chunk.js.map",
+    "main.js": "/chambi-cuisine/static/js/main.eed66195.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.eed66195.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.6a5fcc8d.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.6a5fcc8d.js.map",
-    "static/js/2.cfd0c737.chunk.js": "/chambi-cuisine/static/js/2.cfd0c737.chunk.js",
-    "static/js/2.cfd0c737.chunk.js.map": "/chambi-cuisine/static/js/2.cfd0c737.chunk.js.map",
+    "static/js/2.4ad93fd2.chunk.js": "/chambi-cuisine/static/js/2.4ad93fd2.chunk.js",
+    "static/js/2.4ad93fd2.chunk.js.map": "/chambi-cuisine/static/js/2.4ad93fd2.chunk.js.map",
     "static/js/3.53a0bf1d.chunk.js": "/chambi-cuisine/static/js/3.53a0bf1d.chunk.js",
     "static/js/3.53a0bf1d.chunk.js.map": "/chambi-cuisine/static/js/3.53a0bf1d.chunk.js.map",
     "static/js/4.f0cd395e.chunk.js": "/chambi-cuisine/static/js/4.f0cd395e.chunk.js",
@@ -36,10 +36,10 @@
     "static/js/16.53a5652d.chunk.js": "/chambi-cuisine/static/js/16.53a5652d.chunk.js",
     "static/js/16.53a5652d.chunk.js.map": "/chambi-cuisine/static/js/16.53a5652d.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.a0cfaa3a7e59788ffd2007dc9dd6a302.js": "/chambi-cuisine/precache-manifest.a0cfaa3a7e59788ffd2007dc9dd6a302.js",
+    "precache-manifest.36415daff9f0a5cddc4d5047b5a05ff0.js": "/chambi-cuisine/precache-manifest.36415daff9f0a5cddc4d5047b5a05ff0.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
     "static/css/main.f0ede8e2.chunk.css.map": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css.map",
-    "static/js/2.cfd0c737.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.cfd0c737.chunk.js.LICENSE.txt",
+    "static/js/2.4ad93fd2.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.4ad93fd2.chunk.js.LICENSE.txt",
     "static/media/carotte.png": "/chambi-cuisine/static/media/carotte.8a83c945.png",
     "static/media/chambi.jpg": "/chambi-cuisine/static/media/chambi.fc773319.jpg",
     "static/media/chambi_black.png": "/chambi-cuisine/static/media/chambi_black.f51d06d7.png",
@@ -62,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6a5fcc8d.js",
-    "static/js/2.cfd0c737.chunk.js",
+    "static/js/2.4ad93fd2.chunk.js",
     "static/css/main.f0ede8e2.chunk.css",
-    "static/js/main.7bf595ce.chunk.js"
+    "static/js/main.eed66195.chunk.js"
   ]
 }
