@@ -29,6 +29,7 @@ const StyledHomeRecipe = styled(Link)`
   text-align: center;
   background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
+  background-position: center;
   overflow: hidden;
   opacity: 1;
   transition: opacity 200ms ease;

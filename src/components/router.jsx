@@ -19,10 +19,7 @@ const Container = styled.div`
   -webkit-overflow-scrolling: touch;
 `;
 
-const routes = [
-  { path: "/", Component: Home },
-  { path: "/recipes/:id", Component: Recipe }
-];
+const routes = [{ path: "/", Component: Home }];
 
 const AppRouter = ({ className }) => {
   const { pathname } = useLocation();
@@ -49,6 +46,10 @@ const AppRouter = ({ className }) => {
           )}
         </Route>
       ))}
+      <Route exact path="/recipes/:id">
+        <Recipe />
+      </Route>
+
       <RevealFooter />
     </Container>
   );
