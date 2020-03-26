@@ -8,9 +8,13 @@ import Ingredients from "components/ingredients.jsx";
 
 const Recipe = ({ className }) => {
   const { id } = useParams();
-  const currentRecipe = recipes.find(recipe => recipe.id === id);
-  const nbOfSteps = currentRecipe.steps.length;
 
+  const currentRecipe = recipes.find(recipe => recipe.id === id);
+  if (!currentRecipe) {
+    return null;
+  }
+
+  const nbOfSteps = currentRecipe.steps.length;
   const { ingredients, nbPeople } = currentRecipe;
 
   return (

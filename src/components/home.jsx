@@ -5,6 +5,12 @@ import recipes from "recipes";
 
 import HomeRecipe from "components/home-recipe.jsx";
 
+const Wrapper = styled.div`
+  scroll-snap-align: start;
+  min-height: 100%;
+  background-color: white;
+`;
+
 const Content = styled.div`
   padding: 15px;
   display: flex;
@@ -92,8 +98,8 @@ const ContactLink = styled.a`
   }
 `;
 
-const Home = ({ className }) => {
-  return (
+const Home = ({ className }) => (
+  <Wrapper>
     <Content>
       <H1>Le projet</H1>
       <div>Y'en a pas vraiment</div>
@@ -111,7 +117,7 @@ const Home = ({ className }) => {
         <span>Par mail</span>
       </ContactLink>
     </Content>
-  );
-};
+  </Wrapper>
+);
 
 export default Home;

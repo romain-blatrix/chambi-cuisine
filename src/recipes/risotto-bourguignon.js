@@ -5,7 +5,7 @@ const risottoBourguignon = {
   title: "Risotto bourguignon",
   headerTitle: "un risotto bourguignon",
   ingredients: [
-    "1 bouteille de vin rouge (type Malbec ou Syrah), 60cl pour la recette, le reste pour le cuisinier",
+    "1 bouteille de vin rouge (type Malbec ou Syrah), 65cl pour la recette, le reste pour le cuisinier",
     "25cl de fond de veau",
     "200g de riz arborio (riz à risotto)",
     "2 carottes",

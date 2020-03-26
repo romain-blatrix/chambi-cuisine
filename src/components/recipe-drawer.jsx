@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import styled, { css } from "styled-components";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory, useParams } from "react-router-dom";
 
 import useOnClickOutside from "hooks/click-outside.jsx";
 
@@ -28,7 +28,7 @@ const StyledDrawer = styled.div`
     `}
 `;
 
-const RecipeLink = styled(NavLink)`
+const RecipeLink = styled.button`
   position: relative;
   text-decoration: none;
   color: white;
@@ -36,7 +36,11 @@ const RecipeLink = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0;
   border-bottom: 1px solid lightgrey;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -66,6 +70,15 @@ const RecipeLink = styled(NavLink)`
 
 const Drawer = ({ className, closeDrawer, isVisible, recipes }, ref) => {
   useOnClickOutside(ref, closeDrawer);
+  const history = useHistory();
+
+  const handleClick = id => {
+    closeDrawer();
+    const newRoute = `/recipes/${id}`;
+    if (history.location.pathname !== newRoute) {
+      history.push(`/recipes/${id}`);
+    }
+  };
 
   return (
     <StyledDrawer isVisible={isVisible}>
@@ -73,8 +86,7 @@ const Drawer = ({ className, closeDrawer, isVisible, recipes }, ref) => {
         <RecipeLink
           activeClassName="active"
           key={id}
-          to={`/recipes/${id}`}
-          onClick={closeDrawer}
+          onClick={() => handleClick(id)}
         >
           {title}
         </RecipeLink>

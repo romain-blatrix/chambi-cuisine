@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useRouteMatch, useHistory } from "react-router-dom";
 
 import recipes from "recipes";
 
@@ -38,7 +38,8 @@ const shake = keyframes`
   }
 `;
 
-const LogoContainer = styled(Link)`
+const LogoContainer = styled.div`
+  cursor: pointer;
   width: 60px;
   height: 60px;
   background-color: white;
@@ -75,7 +76,7 @@ const SubTitle = styled.div`
   }
 `;
 
-const Title = styled(Link)`
+const Title = styled.div`
   @media screen and (min-width: 370px) {
     font-size: 24px;
     ${SubTitle} {
@@ -89,6 +90,7 @@ const Title = styled(Link)`
       font-size: 28px;
     }
   }
+  cursor: pointer;
   font-family: "Parisienne";
   font-size: 18px;
   color: white;
@@ -149,6 +151,7 @@ const DrawerTrigger = styled.button`
 const Header = ({ className }) => {
   const ref = useRef(null);
   const match = useRouteMatch("/recipes/:id");
+  const history = useHistory();
 
   const [subTitle, setSubTitle] = useState(null);
 
@@ -167,13 +170,19 @@ const Header = ({ className }) => {
   const handleDrawerToggle = () => setIsDrawerVisible(!isDrawerVisible);
   const closeDrawer = () => setIsDrawerVisible(false);
 
+  const handleClick = id => {
+    if (history.location.pathname !== "/") {
+      history.push("");
+    }
+  };
+
   return (
     <HeaderWrapper className={className}>
       <TitleContainer>
-        <LogoContainer to="/">
+        <LogoContainer onClick={handleClick}>
           <Logo src={logoChambi} alt="logo chambi cuisine" />
         </LogoContainer>
-        <Title to="">
+        <Title onClick={handleClick}>
           <span>Chambi cuisine</span>
           {subTitle && (
             <SubTitle>

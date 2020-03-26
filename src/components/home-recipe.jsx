@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import defaultImage from "assets/image/recipe/default.jpg";
 
@@ -17,7 +17,8 @@ const Title = styled.h2`
   font-size: 20px;
 `;
 
-const StyledHomeRecipe = styled(Link)`
+const StyledHomeRecipe = styled.div`
+  cursor: pointer;
   position: relative;
   background-color: lightblue;
   box-shadow: 0 2px 4px #00000057;
@@ -45,10 +46,18 @@ const StyledHomeRecipe = styled(Link)`
 
 const HomeRecipe = ({ className, id, title }) => {
   const [image, status] = useImage(`recipe/${id}/main.jpg`);
+  const history = useHistory();
+
+  const handleClick = id => {
+    const newRoute = `/recipes/${id}`;
+    if (history.location.pathname !== newRoute) {
+      history.push(`/recipes/${id}`);
+    }
+  };
 
   return (
     <StyledHomeRecipe
-      to={`/recipes/${id}`}
+      onClick={() => handleClick(id)}
       image={status === "loaded" ? image : defaultImage}
     >
       <Title>{title}</Title>
