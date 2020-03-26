@@ -6,11 +6,15 @@ import recipes from "recipes";
 import RecipeStep from "components/recipe-step.jsx";
 import Ingredients from "components/ingredients.jsx";
 
-const Recipe = ({ className }) => {
+const Recipe = ({ className, animationState }) => {
   const { id } = useParams();
   const currentRecipe = recipes.find(recipe => recipe.id === id);
-  const nbOfSteps = currentRecipe.steps.length;
 
+  if (!currentRecipe) {
+    return null;
+  }
+
+  const nbOfSteps = currentRecipe.steps.length;
   const { ingredients, nbPeople } = currentRecipe;
 
   return (
@@ -21,6 +25,7 @@ const Recipe = ({ className }) => {
       {currentRecipe.steps.map(({ description, imageUrl, title }, index) => (
         <RecipeStep
           key={`currentRecipe.id_${index}`}
+          animationState={animationState}
           id={id}
           description={description}
           title={title}

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
+import { Transition } from "react-transition-group";
 
 import Recipe from "components/recipe.jsx";
 import Home from "components/home.jsx";
@@ -18,34 +19,37 @@ const Container = styled.div`
   -webkit-overflow-scrolling: touch;
 `;
 
-const SnapContent = styled.div`
-  scroll-snap-align: start;
-  min-height: 100%;
-  background-color: white;
-`;
+const routes = [
+  { path: "/", Component: Home },
+  { path: "/recipes/:id", Component: Recipe }
+];
 
 const AppRouter = ({ className }) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const ref = useRef(null);
 
   useEffect(() => {
     const router = document.getElementById("router");
     router && router.scrollTo(0, 0);
-  }, [location]);
+  }, [pathname]);
 
   return (
     <Container className={className} ref={ref} id="router">
-      <Switch>
-        <Route path="/recipes/:id" exact>
-          <Recipe />
+      {routes.map(({ path, Component }) => (
+        <Route key={path} exact path={path}>
+          {({ match }) => (
+            <Transition
+              in={match != null}
+              timeout={300}
+              unmountOnExit
+              mountOnEnter
+            >
+              {state => <Component animationState={state} />}
+            </Transition>
+          )}
         </Route>
-        <Route path="/">
-          <SnapContent>
-            <Home />
-          </SnapContent>
-        </Route>
-      </Switch>
-      <RevealFooter></RevealFooter>
+      ))}
+      <RevealFooter />
     </Container>
   );
 };

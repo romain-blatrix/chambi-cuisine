@@ -1,9 +1,31 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import useImage from "hooks/image-loader.jsx";
 
 import defaultImage from "assets/image/recipe/default.jpg";
+
+const show = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.02);
+  }
+`;
+
+const hide = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+`;
 
 const StepContainer = styled.div`
   scroll-snap-align: start;
@@ -18,6 +40,19 @@ const StepContainer = styled.div`
   overflow: hidden;
   padding: 15px 25px;
   text-align: center;
+  ${({ animationState }) => {
+    if (animationState === "entering" || animationState === "entered") {
+      return css`
+        animation: ${show} 150ms ease-out;
+      `;
+    }
+    if (animationState === "exiting" || animationState === "exited") {
+      return css`
+        animation: ${hide} 80ms ease-in forwards;
+      `;
+    }
+    return null;
+  }}
 `;
 
 const StepMark = styled.div`
@@ -65,6 +100,7 @@ const Image = styled.img`
 `;
 
 const RecipeStep = ({
+  animationState,
   className,
   id,
   title,
@@ -76,7 +112,7 @@ const RecipeStep = ({
   const [image, status] = useImage(`recipe/${imageUrl}`);
 
   return (
-    <StepContainer>
+    <StepContainer animationState={animationState}>
       <StepMark>{`${index + 1} / ${nbOfSteps}`}</StepMark>
       <Title>{title}</Title>
       <div>{description}</div>

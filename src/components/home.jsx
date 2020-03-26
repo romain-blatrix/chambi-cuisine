@@ -1,9 +1,37 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import recipes from "recipes";
 
 import HomeRecipe from "components/home-recipe.jsx";
+
+const show = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.02);
+  }
+`;
+
+const hide = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+`;
+
+const Wrapper = styled.div`
+  scroll-snap-align: start;
+  min-height: 100%;
+  background-color: white;
+`;
 
 const Content = styled.div`
   padding: 15px;
@@ -16,6 +44,20 @@ const Content = styled.div`
   @media screen and (min-width: 400px) {
     justify-content: center;
   }
+
+  ${({ animationState }) => {
+    if (animationState === "entering" || animationState === "entered") {
+      return css`
+        animation: ${show} 150ms ease-out;
+      `;
+    }
+    if (animationState === "exiting" || animationState === "exited") {
+      return css`
+        animation: ${hide} 80ms ease-in forwards;
+      `;
+    }
+    return null;
+  }}
 `;
 
 const H1 = styled.h1`
@@ -92,25 +134,27 @@ const ContactLink = styled.a`
   }
 `;
 
-const Home = ({ className }) => {
+const Home = ({ className, animationState }) => {
   return (
-    <Content>
-      <H1>Le projet</H1>
-      <div>Y'en a pas vraiment</div>
-      <H1>Qui sont-ils?</H1>
-      <div>Des burgonds libres</div>
+    <Wrapper>
+      <Content animationState={animationState}>
+        <H1>Le projet</H1>
+        <div>Y'en a pas vraiment</div>
+        <H1>Qui sont-ils?</H1>
+        <div>Des burgonds libres</div>
 
-      <H1>Les recettes</H1>
-      <HomeRecipeList>
-        {recipes.map(({ title, id }) => (
-          <HomeRecipe id={id} key={id} title={title} />
-        ))}
-      </HomeRecipeList>
-      <H1>Contact</H1>
-      <ContactLink href="mailto:romain.blatrix@gmail.com?cc=chambriermatthieu@gmail.com&cc=tommydessine@gmail.com">
-        <span>Par mail</span>
-      </ContactLink>
-    </Content>
+        <H1>Les recettes</H1>
+        <HomeRecipeList>
+          {recipes.map(({ title, id }) => (
+            <HomeRecipe id={id} key={id} title={title} />
+          ))}
+        </HomeRecipeList>
+        <H1>Contact</H1>
+        <ContactLink href="mailto:romain.blatrix@gmail.com?cc=chambriermatthieu@gmail.com&cc=tommydessine@gmail.com">
+          <span>Par mail</span>
+        </ContactLink>
+      </Content>
+    </Wrapper>
   );
 };
 
