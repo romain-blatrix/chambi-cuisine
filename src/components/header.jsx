@@ -22,6 +22,7 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   box-shadow: 1px 2px 8px #00000052;
   z-index: 2;
+  overflow: hidden;
   @media screen and (min-width: 700px) {
     padding: 0 30px;
   }

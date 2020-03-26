@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 400px;
+  height: ${({ theme }) => theme.footerHeight};
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 

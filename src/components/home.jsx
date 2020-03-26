@@ -28,9 +28,9 @@ const hide = keyframes`
 `;
 
 const Wrapper = styled.div`
-  scroll-snap-align: start;
+  /* scroll-snap-align: start;
   min-height: 100%;
-  background-color: white;
+  background-color: white; */
 `;
 
 const Content = styled.div`

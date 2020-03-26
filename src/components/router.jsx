@@ -8,6 +8,12 @@ import Home from "components/home.jsx";
 import RevealFooter from "components/reveal-footer.jsx";
 
 const Container = styled.div`
+  height: 100%;
+  position: relative;
+  z-index: 1;
+`;
+
+const SnapContainer = styled.div`
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
   overflow-y: auto;
@@ -19,8 +25,6 @@ const Container = styled.div`
   -webkit-overflow-scrolling: touch;
 `;
 
-const routes = [{ path: "/", Component: Home }];
-
 const AppRouter = ({ className }) => {
   const { pathname } = useLocation();
   const ref = useRef(null);
@@ -31,27 +35,31 @@ const AppRouter = ({ className }) => {
   }, [pathname]);
 
   return (
-    <Container className={className} ref={ref} id="router">
-      {routes.map(({ path, Component }) => (
-        <Route key={path} exact path={path}>
-          {({ match }) => (
-            <Transition
-              in={match != null}
-              timeout={300}
-              unmountOnExit
-              mountOnEnter
-            >
-              {state => <Component animationState={state} />}
-            </Transition>
-          )}
-        </Route>
-      ))}
-      <Route exact path="/recipes/:id">
-        <Recipe />
+    <>
+      <Route exact path="/">
+        {({ match }) => (
+          <Transition
+            in={match != null}
+            timeout={300}
+            unmountOnExit
+            mountOnEnter
+          >
+            {state => (
+              <Container>
+                <Home animationState={state} />
+                <RevealFooter />
+              </Container>
+            )}
+          </Transition>
+        )}
       </Route>
-
-      <RevealFooter />
-    </Container>
+      <Route exact path="/recipes/:id">
+        <SnapContainer className={className} ref={ref} id="router">
+          <Recipe />
+          <RevealFooter />
+        </SnapContainer>
+      </Route>
+    </>
   );
 };
 
