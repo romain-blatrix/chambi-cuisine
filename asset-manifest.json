@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/chambi-cuisine/static/css/main.6605b4f1.chunk.css",
-    "main.js": "/chambi-cuisine/static/js/main.bb170bcd.chunk.js",
-    "main.js.map": "/chambi-cuisine/static/js/main.bb170bcd.chunk.js.map",
+    "main.css": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css",
+    "main.js": "/chambi-cuisine/static/js/main.1f848e2f.chunk.js",
+    "main.js.map": "/chambi-cuisine/static/js/main.1f848e2f.chunk.js.map",
     "runtime-main.js": "/chambi-cuisine/static/js/runtime-main.55df44db.js",
     "runtime-main.js.map": "/chambi-cuisine/static/js/runtime-main.55df44db.js.map",
     "static/js/2.ccd9d24b.chunk.js": "/chambi-cuisine/static/js/2.ccd9d24b.chunk.js",
@@ -38,9 +38,9 @@
     "static/js/17.341cb9a5.chunk.js": "/chambi-cuisine/static/js/17.341cb9a5.chunk.js",
     "static/js/17.341cb9a5.chunk.js.map": "/chambi-cuisine/static/js/17.341cb9a5.chunk.js.map",
     "index.html": "/chambi-cuisine/index.html",
-    "precache-manifest.076da2548027d2843269552ca86b28f1.js": "/chambi-cuisine/precache-manifest.076da2548027d2843269552ca86b28f1.js",
+    "precache-manifest.931a91f10c16a22bbcf72caab7a3cb16.js": "/chambi-cuisine/precache-manifest.931a91f10c16a22bbcf72caab7a3cb16.js",
     "service-worker.js": "/chambi-cuisine/service-worker.js",
-    "static/css/main.6605b4f1.chunk.css.map": "/chambi-cuisine/static/css/main.6605b4f1.chunk.css.map",
+    "static/css/main.f0ede8e2.chunk.css.map": "/chambi-cuisine/static/css/main.f0ede8e2.chunk.css.map",
     "static/js/2.ccd9d24b.chunk.js.LICENSE.txt": "/chambi-cuisine/static/js/2.ccd9d24b.chunk.js.LICENSE.txt",
     "static/media/carotte.png": "/chambi-cuisine/static/media/carotte.8a83c945.png",
     "static/media/chambi.jpg": "/chambi-cuisine/static/media/chambi.fc773319.jpg",
@@ -66,7 +66,7 @@
   "entrypoints": [
     "static/js/runtime-main.55df44db.js",
     "static/js/2.ccd9d24b.chunk.js",
-    "static/css/main.6605b4f1.chunk.css",
-    "static/js/main.bb170bcd.chunk.js"
+    "static/css/main.f0ede8e2.chunk.css",
+    "static/js/main.1f848e2f.chunk.js"
   ]
 }
