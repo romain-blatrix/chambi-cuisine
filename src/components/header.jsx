@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   position: sticky;
   flex-shrink: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: ${({ theme }) => theme.headerHeight};
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;

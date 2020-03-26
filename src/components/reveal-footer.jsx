@@ -72,7 +72,7 @@ const Block = styled.div`
 const Dev = styled.div`
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: 25px;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -98,6 +98,7 @@ const DevLink = styled.a`
   text-decoration: none;
   position: relative;
   color: white;
+  font-weight: 700;
   &::after {
     content: "";
     position: absolute;

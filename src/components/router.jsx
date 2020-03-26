@@ -11,6 +11,7 @@ const Container = styled.div`
   height: 100%;
   position: relative;
   z-index: 1;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 `;
 
 const SnapContainer = styled.div`

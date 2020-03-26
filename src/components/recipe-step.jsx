@@ -30,7 +30,7 @@ const hide = keyframes`
 const StepContainer = styled.div`
   scroll-snap-align: start;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;

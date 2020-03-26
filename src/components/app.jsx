@@ -11,7 +11,7 @@ import AppRouter from "components/router.jsx";
 
 const GlobalWrapper = styled.div`
   position: relative;
-  width: 100vw;
+  width: 100%;
 `;
 
 const App = () => {

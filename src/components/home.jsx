@@ -30,11 +30,16 @@ const hide = keyframes`
 const Content = styled.div`
   padding: 15px;
   display: flex;
+  text-align: justify;
   flex-flow: column nowrap;
   justify-content: left;
   align-items: flex-start;
   max-width: 800px;
   margin: 0 auto;
+  i {
+    font-style: italic;
+  }
+
   @media screen and (min-width: 400px) {
     justify-content: center;
   }
@@ -136,6 +141,28 @@ const ContactLink = styled.a`
   }
 `;
 
+const DevLink = styled.a`
+  text-decoration: none;
+  position: relative;
+  font-weight: 700;
+  color: currentColor;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 100ms ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+    transition: width 100ms ease-out;
+  }
+`;
+
 const Home = ({ className, animationState }) => {
   return (
     <Content animationState={animationState}>
@@ -150,24 +177,52 @@ const Home = ({ className, animationState }) => {
           Loin des standards des guides de cuisine ou des tutoriels en tout
           genre, ce projet se veut autant ludique que lubrique. Ici pas de place
           pour le calcul calorique et les néologismes finissant en « isme », ce
-          que nous proposons est une cuisine identifiable avec « du beurre, de
-          la crème, des os et des arêtes » comme le défendait le regretté Paul
-          Bocuse.
+          que nous proposons est une cuisine identifiable avec «{" "}
+          <i>du beurre, de la crème, des os et des arêtes</i> » comme le
+          défendait le regretté Paul Bocuse.
         </p>
         <p>
-          Que vous soyez des cordons bleus en herbe, des bec fins, des
+          Que vous soyez des cordons bleus en herbe, des becs fins, des
           épicuriens ventripotents ou de simple curieux, vous trouverez sur ce
           site de quoi combler votre faim et même plus encore.
         </p>
         <p>
           Soyez curieux, soyez gourmands, faites-vous plaisir et n’oubliez pas
-          que « la cuisine est l’art de transformer instantanément en joie des
-          produits chargés d’histoire ».
+          que «{" "}
+          <i>
+            la cuisine est l’art de transformer instantanément en joie des
+            produits chargés d’histoire
+          </i>{" "}
+          ».
         </p>
       </div>
       <H1>Qui sont-ils?</H1>
       <div>
-        Des Burgonds libres. Chambi cuisine, Tommy dessine et Romain développe.
+        Des Burgonds libres :{" "}
+        <DevLink
+          href="https://www.instagram.com/romain_blatrix"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Romain développe
+        </DevLink>
+        ,{" "}
+        <DevLink
+          href="https://www.instagram.com/tommydessine"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tommy dessine
+        </DevLink>{" "}
+        et{" "}
+        <DevLink
+          href="https://www.instagram.com/chambicuisine"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chambi cuisine
+        </DevLink>
+        .
       </div>
 
       <H1>Les recettes</H1>
