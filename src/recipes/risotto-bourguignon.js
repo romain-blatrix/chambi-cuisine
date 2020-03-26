@@ -35,15 +35,18 @@ const risottoBourguignon = {
     },
     {
       title: "Préparation de la garniture 1/5",
-      description: "Éplucher et couper les carottes en macédoine (5mm de côté)"
+      description: "Éplucher et couper les carottes en macédoine",
+      imageUrl: `${id}/step2_1.jpg`
     },
     {
       title: "Préparation de la garniture 2/5",
-      description: "Ciseler les échalotes"
+      description: "Ciseler les échalotes",
+      imageUrl: `${id}/step2_2.jpg`
     },
     {
       title: "Préparation de la garniture 3/5",
-      description: "Couper les champignons boutons en 4"
+      description: "Couper les champignons boutons en 4",
+      imageUrl: `${id}/step2_3.jpg`
     },
     {
       title: "Préparation de la garniture 4/5",
