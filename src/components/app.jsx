@@ -12,6 +12,7 @@ import AppRouter from "components/router.jsx";
 const GlobalWrapper = styled.div`
   position: relative;
   width: 100vw;
+  overflow-x: hidden;
 `;
 
 const App = () => {
@@ -19,9 +20,11 @@ const App = () => {
     <GlobalTheme>
       <HashRouter>
         <GlobalWrapper>
-          <Header />
-          <AppRouter />
-          <Footer />
+          <div>
+            <Header />
+            <AppRouter />
+            <Footer />
+          </div>
         </GlobalWrapper>
       </HashRouter>
     </GlobalTheme>
