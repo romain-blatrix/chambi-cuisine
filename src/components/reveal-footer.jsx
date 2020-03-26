@@ -1,14 +1,18 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import { ReactComponent as InstagramSvg } from "assets/svg/instagram.svg";
 import { ReactComponent as Heart } from "assets/svg/heart.svg";
 
 const Wrapper = styled.div`
+  ${({ snap }) =>
+    snap &&
+    css`
+      scroll-snap-align: start;
+    `};
   position: relative;
   height: ${({ theme }) => theme.footerHeight};
   background-color: transparent;
-  scroll-snap-align: start;
   box-shadow: inset 0px 6px 9px 1px #00000059;
   display: flex;
   justify-content: center;
@@ -111,8 +115,8 @@ const DevLink = styled.a`
   }
 `;
 
-const RevealFooter = ({ className }) => (
-  <Wrapper className={className}>
+const RevealFooter = ({ className, snap }) => (
+  <Wrapper className={className} snap={snap}>
     <MainFooterContent>
       <Block
         onClick={() =>

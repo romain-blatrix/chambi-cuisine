@@ -56,7 +56,7 @@ const AppRouter = ({ className }) => {
       <Route exact path="/recipes/:id">
         <SnapContainer className={className} ref={ref} id="router">
           <Recipe />
-          <RevealFooter />
+          <RevealFooter snap />
         </SnapContainer>
       </Route>
     </>
