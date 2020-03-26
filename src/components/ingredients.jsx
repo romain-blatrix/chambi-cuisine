@@ -32,6 +32,7 @@ const StyledIngredients = styled.ul`
   height: 100%;
   margin: 0;
   padding-left: 10px;
+  padding-bottom: 20px;
   overflow: auto;
 `;
 
