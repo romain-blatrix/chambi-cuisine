@@ -1,9 +1,27 @@
 import React, { useState, useRef } from "react";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import useOnClickOutside from "hooks/click-outside.jsx";
 
 import logo from "assets/image/logo/chambi_black.png";
+
+const wiggle = keyframes`
+  0% {
+    transform: scale(1) rotate(90deg);
+  }
+  8% {
+    transform: scale(1.2) rotate(90deg);
+  }
+  16% {
+    transform: scale(1) rotate(90deg);
+  }
+  24% {
+    transform: scale(1.2) rotate(90deg);
+  }
+  32% {
+    transform: scale(1) rotate(90deg);
+  }
+`;
 
 const IngregientsWrapper = styled.div`
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
@@ -53,6 +71,11 @@ const IngredientsTrigger = styled.button`
   border: 0;
   cursor: pointer;
   box-shadow: 1px -3px 3px 0px #00000021;
+  ${({ animateTrigger }) =>
+    animateTrigger &&
+    css`
+      animation: ${wiggle} 5000ms 5 3000ms;
+    `};
   &:focus {
     outline: 0;
   }
@@ -78,9 +101,14 @@ const Ingredient = styled.li`
 const Ingredients = ({ className, ingredients, nbPeople }) => {
   const ref = useRef(null);
   const [isIngredientsVisible, setIsIngredientsVisible] = useState(false);
+  const [animateTrigger, setAnimateTrigger] = useState(true);
 
-  const handleIngredientsToggle = () =>
+  const handleIngredientsToggle = () => {
+    if (!isIngredientsVisible && animateTrigger) {
+      setAnimateTrigger(false);
+    }
     setIsIngredientsVisible(!isIngredientsVisible);
+  };
 
   const closeIngredients = () => setIsIngredientsVisible(false);
 
@@ -89,8 +117,11 @@ const Ingredients = ({ className, ingredients, nbPeople }) => {
   return (
     <IngregientsWrapper ref={ref} isVisible={isIngredientsVisible}>
       <Title>Ingrédients{nbPeople && ` pour ${nbPeople} personnes :`}</Title>
-      <IngredientsTrigger onClick={handleIngredientsToggle}>
-        Ingredients
+      <IngredientsTrigger
+        onClick={handleIngredientsToggle}
+        animateTrigger={animateTrigger}
+      >
+        <span>Ingredients</span>
       </IngredientsTrigger>
       <StyledIngredients>
         {ingredients.map((ingredient, index) => (
