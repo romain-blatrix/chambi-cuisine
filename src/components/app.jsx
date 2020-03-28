@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { HashRouter } from "react-router-dom";
-import scrollSnapPolyfill from "css-scroll-snap-polyfill";
 
 import GlobalTheme from "theme/provider.jsx";
 
@@ -14,20 +13,16 @@ const GlobalWrapper = styled.div`
   width: 100%;
 `;
 
-const App = () => {
-  useEffect(() => scrollSnapPolyfill(), []);
-
-  return (
-    <GlobalTheme>
-      <HashRouter>
-        <GlobalWrapper>
-          <Header />
-          <AppRouter />
-          <Footer />
-        </GlobalWrapper>
-      </HashRouter>
-    </GlobalTheme>
-  );
-};
+const App = () => (
+  <GlobalTheme>
+    <HashRouter>
+      <GlobalWrapper>
+        <Header />
+        <AppRouter />
+        <Footer />
+      </GlobalWrapper>
+    </HashRouter>
+  </GlobalTheme>
+);
 
 export default App;

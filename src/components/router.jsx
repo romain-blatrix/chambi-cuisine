@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Route, useLocation } from "react-router-dom";
 import { Transition } from "react-transition-group";
+import scrollSnapPolyfill from "css-scroll-snap-polyfill";
 
 import Recipe from "components/recipe.jsx";
 import Home from "components/home.jsx";
@@ -20,7 +21,9 @@ const SnapContainer = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
-  height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
+  @supports (color: var(--)) {
+    height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
+  } 
   position: relative;
   z-index: 1;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -34,6 +37,8 @@ const AppRouter = ({ className }) => {
     const router = document.getElementById("router");
     router && router.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => scrollSnapPolyfill(), []);
 
   return (
     <>

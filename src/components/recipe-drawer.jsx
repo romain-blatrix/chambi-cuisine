@@ -9,7 +9,9 @@ const StyledDrawer = styled.div`
   width: 300px;
   max-width: 90vw;
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
-  height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
+  @supports (color: var(--)) {
+    height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
+  }
   background-color: ${({ theme }) => theme.colors.secondary};
   position: fixed;
   top: ${({ theme }) => theme.headerHeight};
