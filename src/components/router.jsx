@@ -16,6 +16,7 @@ const Container = styled.div`
 
 const SnapContainer = styled.div`
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
@@ -23,7 +24,6 @@ const SnapContainer = styled.div`
   position: relative;
   z-index: 1;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  -webkit-overflow-scrolling: touch;
 `;
 
 const AppRouter = ({ className }) => {
