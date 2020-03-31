@@ -116,6 +116,10 @@ const risottoBourguignon = {
       title: "La cuisson du risotto 6/6",
       description: "Compter environ 12 minutes de cuisson à feu doux",
       imageUrl: `${id}/step4_6.jpg`
+    },
+    {
+      title: "Bonne dégustation!",
+      imageUrl: `${id}/step5_1.jpg`
     }
   ]
 };

@@ -25,6 +25,9 @@ const wiggle = keyframes`
 
 const IngregientsWrapper = styled.div`
   height: calc(100vh - ${({ theme }) => theme.headerHeight});
+  @supports (color: var(--)) {
+    height: calc(var(--vh, 1vh) * 100 - ${({ theme }) => theme.headerHeight});
+  }
   width: 280px;
   position: fixed;
   background-color: #e4bdcd;
@@ -71,6 +74,7 @@ const IngredientsContent = styled.div`
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 15px;
 `;
 
@@ -151,8 +155,8 @@ const Ingredients = ({ className, ingredients, nbPeople, prepTime, level }) => {
             <DifficultyWrapper>
               {Array(5)
                 .fill()
-                .map(_ => (
-                  <Logo difficulty={level} />
+                .map((_, index) => (
+                  <Logo key={`difficulty${index}`} difficulty={level} />
                 ))}
             </DifficultyWrapper>
           </Title>
