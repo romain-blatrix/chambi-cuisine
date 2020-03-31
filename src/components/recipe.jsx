@@ -15,12 +15,17 @@ const Recipe = ({ className, animationState }) => {
   }
 
   const nbOfSteps = currentRecipe.steps.length;
-  const { ingredients, nbPeople } = currentRecipe;
+  const { ingredients, nbPeople, level, prepTime } = currentRecipe;
 
   return (
     <>
       {ingredients && (
-        <Ingredients ingredients={ingredients} nbPeople={nbPeople} />
+        <Ingredients
+          ingredients={ingredients}
+          nbPeople={nbPeople}
+          level={level}
+          prepTime={prepTime}
+        />
       )}
       {currentRecipe.steps.map(({ description, imageUrl, title }, index) => (
         <RecipeStep

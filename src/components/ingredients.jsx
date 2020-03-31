@@ -28,7 +28,6 @@ const IngregientsWrapper = styled.div`
   width: 280px;
   position: fixed;
   background-color: #e4bdcd;
-  padding: 15px;
   z-index: 1;
   box-shadow: 0px 0px 6px 2px #0000003b;
   transform: translateX(-280px);
@@ -39,19 +38,6 @@ const IngregientsWrapper = styled.div`
       transform: translateX(0);
       transition: transform 300ms ease;
     `}
-`;
-
-const Title = styled.div`
-  margin: 5px 0 15px;
-  font-weight: 700;
-`;
-
-const StyledIngredients = styled.ul`
-  height: 100%;
-  margin: 0;
-  padding-left: 10px;
-  padding-bottom: 20px;
-  overflow: auto;
 `;
 
 const IngredientsTrigger = styled.button`
@@ -81,6 +67,29 @@ const IngredientsTrigger = styled.button`
   }
 `;
 
+const IngredientsContent = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 15px;
+`;
+
+const Title = styled.div`
+  margin: 5px 0 15px;
+  font-weight: 700;
+`;
+
+const DifficultyWrapper = styled.div`
+  display: flex;
+`;
+
+const StyledIngredients = styled.ul`
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #5d5d5d;
+  border-radius: 8px;
+`;
+
 const Logo = styled.div`
   height: 17px;
   width: 39px;
@@ -88,6 +97,18 @@ const Logo = styled.div`
   margin-top: 3px;
   background: url(${logo}) no-repeat;
   background-size: contain;
+  ${({ difficulty }) =>
+    difficulty &&
+    css`
+      height: 30px;
+      width: 30px;
+      background-position: center;
+      margin-right: 2px;
+      &:nth-of-type(-n + ${difficulty}) {
+        background-color: white;
+        border-radius: 50%;
+      }
+    `}
 `;
 
 const Ingredient = styled.li`
@@ -98,7 +119,7 @@ const Ingredient = styled.li`
   justify-content: flex-start;
 `;
 
-const Ingredients = ({ className, ingredients, nbPeople }) => {
+const Ingredients = ({ className, ingredients, nbPeople, prepTime, level }) => {
   const ref = useRef(null);
   const [isIngredientsVisible, setIsIngredientsVisible] = useState(false);
   const [animateTrigger, setAnimateTrigger] = useState(true);
@@ -116,21 +137,36 @@ const Ingredients = ({ className, ingredients, nbPeople }) => {
 
   return (
     <IngregientsWrapper ref={ref} isVisible={isIngredientsVisible}>
-      <Title>Ingrédients{nbPeople && ` pour ${nbPeople} personnes :`}</Title>
       <IngredientsTrigger
         onClick={handleIngredientsToggle}
         animateTrigger={animateTrigger}
       >
         <span>Ingredients</span>
       </IngredientsTrigger>
-      <StyledIngredients>
-        {ingredients.map((ingredient, index) => (
-          <Ingredient key={`ingredient${index}`}>
-            <Logo />
-            {ingredient}
-          </Ingredient>
-        ))}
-      </StyledIngredients>
+      <IngredientsContent>
+        {prepTime && <Title>Temps de préparation : {prepTime}</Title>}
+        {level && (
+          <Title>
+            Niveau de difficulté :
+            <DifficultyWrapper>
+              {Array(5)
+                .fill()
+                .map(_ => (
+                  <Logo difficulty={level} />
+                ))}
+            </DifficultyWrapper>
+          </Title>
+        )}
+        <Title>Ingrédients{nbPeople && ` pour ${nbPeople} personnes :`}</Title>
+        <StyledIngredients>
+          {ingredients.map((ingredient, index) => (
+            <Ingredient key={`ingredient${index}`}>
+              <Logo />
+              {ingredient}
+            </Ingredient>
+          ))}
+        </StyledIngredients>
+      </IngredientsContent>
     </IngregientsWrapper>
   );
 };
